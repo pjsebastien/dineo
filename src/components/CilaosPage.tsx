@@ -50,7 +50,7 @@ const CilaosPage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Que faire à Cilaos à La Réunion ? | Canyoning et Randonnées</title>
-        <meta name="description" content="Découvrez les activités à Cilaos : canyon Fleurs Jaunes, randonnées Piton des Neiges, sources thermales. Guide complet du cirque montagnard de La Réunion." />
+        <meta name="description" content="Découvrez les activités à Cilaos : canyon Fleurs Jaunes, randonnées Piton des Neiges, sources thermales. Toutes les activités du cirque montagnard de La Réunion." />
         <meta name="keywords" content="que faire cilaos réunion, canyoning cilaos, fleurs jaunes cilaos, randonnée cilaos, piton des neiges, cirque cilaos activités" />
         <link rel="canonical" href="https://dineo.re/que-faire-cilaos-reunion" />
       </Helmet>
@@ -125,7 +125,7 @@ const CilaosPage: React.FC = () => {
         {/* SEO Content */}
         <section className="bg-white rounded-xl shadow-lg p-8 mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Guide complet : que faire à Cilaos à La Réunion ?
+            Que faire à Cilaos à La Réunion ?
           </h2>
           
           <div className="prose prose-lg max-w-none text-gray-700">

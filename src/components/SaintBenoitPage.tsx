@@ -127,7 +127,7 @@ const SaintBenoitPage: React.FC = () => {
         {/* SEO Content */}
         <section className="bg-white rounded-xl shadow-lg p-8 mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Guide complet : que faire à Saint-Benoît à La Réunion ?
+            Que faire à Saint-Benoît à La Réunion ?
           </h2>
           
           <div className="prose prose-lg max-w-none text-gray-700">

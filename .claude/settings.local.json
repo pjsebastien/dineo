@@ -41,7 +41,8 @@
       "Bash(node_modules/.bin/vite build --ssr src/entry-server.tsx --outDir dist-ssr)",
       "Bash(./node_modules/.bin/vite:*)",
       "Bash(npm run build:client:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(git push)"
     ]
   }
 }

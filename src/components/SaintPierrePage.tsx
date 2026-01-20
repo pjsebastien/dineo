@@ -50,7 +50,7 @@ const SaintPierrePage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Que faire à Saint-Pierre à La Réunion ? | Activités et Visites</title>
-        <meta name="description" content="Découvrez les meilleures activités à Saint-Pierre : survols en hélicoptère, accès Piton de la Fournaise. Guide complet des expériences depuis le sud de La Réunion." />
+        <meta name="description" content="Découvrez les meilleures activités à Saint-Pierre : survols en hélicoptère, accès Piton de la Fournaise. Toutes les expériences depuis le sud de La Réunion." />
         <meta name="keywords" content="que faire saint-pierre réunion, activités saint-pierre réunion, hélicoptère saint-pierre, piton fournaise saint-pierre, visiter saint-pierre réunion" />
         <link rel="canonical" href="https://dineo.re/que-faire-saint-pierre-reunion" />
       </Helmet>
@@ -125,7 +125,7 @@ const SaintPierrePage: React.FC = () => {
         {/* SEO Content */}
         <section className="bg-white rounded-xl shadow-lg p-8 mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Guide complet : que faire à Saint-Pierre à La Réunion ?
+            Que faire à Saint-Pierre à La Réunion ?
           </h2>
           
           <div className="prose prose-lg max-w-none text-gray-700">

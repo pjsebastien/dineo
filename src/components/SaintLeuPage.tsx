@@ -52,7 +52,7 @@ const SaintLeuPage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Que faire à Saint-Leu à La Réunion ? | Activités Nautiques et Parapente</title>
-        <meta name="description" content="Découvrez les activités incontournables à Saint-Leu : plongée Réserve marine, parapente lagon, snorkeling. Guide complet des expériences aquatiques et aériennes." />
+        <meta name="description" content="Découvrez les activités incontournables à Saint-Leu : plongée Réserve marine, parapente lagon, snorkeling. Toutes les expériences aquatiques et aériennes." />
         <meta name="keywords" content="que faire saint-leu réunion, activités saint-leu, plongée saint-leu, parapente saint-leu, réserve marine saint-leu, snorkeling saint-leu" />
         <link rel="canonical" href="https://dineo.re/que-faire-saint-leu-reunion" />
       </Helmet>
@@ -127,7 +127,7 @@ const SaintLeuPage: React.FC = () => {
         {/* SEO Content */}
         <section className="bg-white rounded-xl shadow-lg p-8 mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Guide complet : que faire à Saint-Leu à La Réunion ?
+            Que faire à Saint-Leu à La Réunion ?
           </h2>
           
           <div className="prose prose-lg max-w-none text-gray-700">

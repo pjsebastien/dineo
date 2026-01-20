@@ -52,7 +52,7 @@ const PitonFournaisePage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Que faire au Piton de la Fournaise à La Réunion ? | Volcan Actif</title>
-        <meta name="description" content="Découvrez les activités au Piton de la Fournaise : randonnées cratère, spéléologie tunnels de lave, survols hélicoptère. Guide complet du volcan actif de La Réunion." />
+        <meta name="description" content="Découvrez les activités au Piton de la Fournaise : randonnées cratère, spéléologie tunnels de lave, survols hélicoptère. Toutes les activités du volcan actif de La Réunion." />
         <meta name="keywords" content="piton de la fournaise activités, randonnée volcan réunion, spéléologie tunnels lave, cratère dolomieu, volcan actif réunion" />
         <link rel="canonical" href="https://dineo.re/que-faire-piton-fournaise-reunion" />
       </Helmet>
@@ -127,7 +127,7 @@ const PitonFournaisePage: React.FC = () => {
         {/* SEO Content */}
         <section className="bg-white rounded-xl shadow-lg p-8 mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Guide complet : que faire au Piton de la Fournaise ?
+            Que faire au Piton de la Fournaise ?
           </h2>
           
           <div className="prose prose-lg max-w-none text-gray-700">
