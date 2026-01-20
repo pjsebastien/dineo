@@ -22,7 +22,6 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import NotFoundPage from './components/NotFoundPage';
 import RedirectComponent from './components/RedirectComponent';
-import SitemapGenerator from './components/SitemapGenerator';
 import MentionsLegalesPage from './components/MentionsLegalesPage';
 import PolitiqueConfidentialitePage from './components/PolitiqueConfidentialitePage';
 import CGVPage from './components/CGVPage';
@@ -347,7 +346,6 @@ export function AppRoutes() {
       <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
       <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
       <Route path="/cgu" element={<CGVPage />} />
-      <Route path="/sitemap-generator" element={<SitemapGenerator />} />
       <Route path="/:path" element={<RedirectComponent />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>

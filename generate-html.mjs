@@ -186,3 +186,44 @@ for (const url of urls) {
 }
 
 console.log(`\n✅ Generated ${count}/${urls.length} HTML pages!\n`);
+
+// ========================================
+// GÉNÉRATION AUTOMATIQUE DU SITEMAP
+// ========================================
+
+console.log('🗺️  Generating sitemap.xml...\n');
+
+const baseUrl = 'https://dineo.re';
+const today = new Date().toISOString().split('T')[0];
+
+// Configuration des priorités et fréquences
+const getPageConfig = (url) => {
+  if (url === '/') return { priority: '1.0', changefreq: 'daily' };
+  if (url.startsWith('/activite/')) return { priority: '0.8', changefreq: 'weekly' };
+  if (url.startsWith('/activites-') || url.startsWith('/que-faire-')) return { priority: '0.9', changefreq: 'weekly' };
+  if (['/mentions-legales', '/politique-confidentialite', '/cgu'].includes(url)) return { priority: '0.3', changefreq: 'yearly' };
+  return { priority: '0.5', changefreq: 'monthly' };
+};
+
+// Génère le XML du sitemap
+const sitemapEntries = urls.map(url => {
+  const config = getPageConfig(url);
+  const fullUrl = url === '/' ? baseUrl : `${baseUrl}${url}`;
+  return `  <url>
+    <loc>${fullUrl}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${config.changefreq}</changefreq>
+    <priority>${config.priority}</priority>
+  </url>`;
+}).join('\n');
+
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapEntries}
+</urlset>`;
+
+// Écrit le fichier sitemap.xml dans dist/
+const sitemapPath = path.resolve(__dirname, 'dist/sitemap.xml');
+fs.writeFileSync(sitemapPath, sitemapXml, 'utf-8');
+
+console.log(`✅ Sitemap generated with ${urls.length} URLs: dist/sitemap.xml\n`);

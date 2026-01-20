@@ -101,10 +101,6 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
                     <Link to="/activites-a-offrir-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Activités à offrir
                     </Link>
-                    <div className="border-t border-gray-200 my-2"></div>
-                    <Link to="/sitemap-generator" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors text-xs">
-                      🗺️ Générateur Sitemap
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -386,12 +382,6 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
               Activités à offrir
             </Link>
            
-           <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2">
-             Outils
-           </div>
-           <Link to="/sitemap-generator" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-             🗺️ Générateur Sitemap
-           </Link>
             <a
               href="https://www.blog.dineo.re/"
               target="_blank"
