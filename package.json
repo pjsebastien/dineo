@@ -5,10 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vite build --config vite.config.ssr.ts && node generate-html.mjs",
+    "build": "node scripts/vercel-build.mjs",
     "build:client": "vite build",
-    "build:ssr": "vite build --config vite.config.ssr.ts",
-    "generate": "node generate-html.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

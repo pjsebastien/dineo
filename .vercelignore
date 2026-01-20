@@ -1,0 +1,25 @@
+# Development
+node_modules
+.git
+.vscode
+
+# Source files (already bundled)
+src
+public
+
+# Build artifacts
+dist-ssr
+build.mjs
+generate-html.mjs
+
+# Documentation
+*.md
+!README.md
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
