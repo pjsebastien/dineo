@@ -29,7 +29,10 @@
       "Bash(npm run build:*)",
       "Bash(start /B npm run preview)",
       "Bash(timeout /t 5 /nobreak)",
-      "Bash(powershell -Command \"Start-Sleep -Seconds 5\")"
+      "Bash(powershell -Command \"Start-Sleep -Seconds 5\")",
+      "Bash(tee:*)",
+      "Bash(/c/Program Files/nodejs/npm.cmd run build:ssr)",
+      "Bash(/c/Program Files/nodejs/npm.cmd run build:client)"
     ]
   }
 }

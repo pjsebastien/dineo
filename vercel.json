@@ -1,9 +1,7 @@
 {
-  "buildCommand": "node scripts/build-with-prerender.mjs",
+  "buildCommand": "",
   "outputDirectory": "dist",
   "framework": null,
-  "cleanUrls": false,
-  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
