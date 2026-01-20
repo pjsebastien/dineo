@@ -1,28 +1,27 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { fileURLToPath } from 'url';
-import { dirname, resolve } from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+export default defineConfig(({ command, mode }) => {
+  // SSR build configuration
+  if (command === 'build' && process.env.SSR) {
+    return {
+      plugins: [react()],
+      build: {
+        ssr: true,
+        outDir: 'dist-ssr',
+        rollupOptions: {
+          input: 'src/entry-server.tsx',
+          output: { format: 'es' }
+        }
+      }
+    };
+  }
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
+  // Client build configuration (default)
+  return {
+    plugins: [react()],
+    optimizeDeps: {
+      exclude: ['lucide-react'],
     },
-  },
-  build: {
-    rollupOptions: {
-      input: resolve(__dirname, 'index.html'),
-      output: {
-        manualChunks: undefined,
-      },
-    },
-  },
+  };
 });
