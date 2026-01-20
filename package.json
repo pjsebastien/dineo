@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "node build-all.mjs",
-    "build:client": "node build-client.mjs",
-    "build:ssr": "node build-ssr.mjs",
+    "build:client": "vite build",
+    "build:ssr": "vite build",
     "generate": "node generate-html.mjs",
     "lint": "eslint .",
     "preview": "vite preview"

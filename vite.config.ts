@@ -1,5 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(({ command, mode }) => {
   // SSR build configuration
@@ -10,7 +14,7 @@ export default defineConfig(({ command, mode }) => {
         ssr: true,
         outDir: 'dist-ssr',
         rollupOptions: {
-          input: 'src/entry-server.tsx',
+          input: path.resolve(__dirname, 'src/entry-server.tsx'),
           output: { format: 'es' }
         }
       }
@@ -23,5 +27,10 @@ export default defineConfig(({ command, mode }) => {
     optimizeDeps: {
       exclude: ['lucide-react'],
     },
+    resolve: {
+      alias: {
+        '/src': path.resolve(__dirname, 'src')
+      }
+    }
   };
 });
