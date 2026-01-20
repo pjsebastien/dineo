@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 import { Star, MapPin, Search } from 'lucide-react';
 import Header from './components/Header';
 import Hero from './components/Hero';

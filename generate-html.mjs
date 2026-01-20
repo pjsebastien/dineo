@@ -163,7 +163,7 @@ for (const url of urls) {
     console.log(`  [${++count}/${urls.length}] Rendering ${url}`);
 
     // 1. Génère le HTML de la page avec SSR
-    const { html: appHtml, helmet: helmetContext } = await render(url);
+    const { html: appHtml } = await render(url);
 
     // 2. Remplace le placeholder dans index.html
     let html = template.replace('<!--app-html-->', appHtml);
