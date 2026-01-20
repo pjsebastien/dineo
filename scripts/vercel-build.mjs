@@ -14,7 +14,7 @@ console.log('='.repeat(60));
 // Étape 1: Build Vite
 console.log('\n📦 Step 1/3: Building with Vite...\n');
 try {
-  execSync('vite build', { stdio: 'inherit' });
+  execSync('npx vite build', { stdio: 'inherit' });
   console.log('\n✅ Vite build completed');
 } catch (error) {
   console.error('❌ Vite build failed');
@@ -24,7 +24,7 @@ try {
 // Étape 2: Lancer le serveur preview
 console.log('\n🚀 Step 2/3: Starting preview server...\n');
 
-const server = spawn('vite', ['preview', '--port', '4173'], {
+const server = spawn('npx', ['vite', 'preview', '--port', '4173'], {
   stdio: ['ignore', 'pipe', 'pipe'],
   shell: true
 });
