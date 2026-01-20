@@ -1,10 +1,29 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { AppRoutes } from './App';
 import './index.css';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+const root = document.getElementById('root')!;
+
+// Vérifie si le contenu a été pré-rendu (SSR)
+if (root.innerHTML && root.innerHTML.trim() !== '' && !root.innerHTML.includes('<!--app-html-->')) {
+  // Hydrate le HTML pré-rendu
+  ReactDOM.hydrateRoot(
+    root,
+    <React.StrictMode>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+} else {
+  // Pas de HTML pré-rendu (dev mode), monte normalement
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+}
