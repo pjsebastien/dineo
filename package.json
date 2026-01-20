@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:ssg": "npm run build && npm run preview & sleep 3 && node scripts/simple-prerender.mjs",
+    "build:ssg": "node scripts/build-with-prerender.mjs",
     "prerender": "node scripts/simple-prerender.mjs",
     "lint": "eslint .",
     "preview": "vite preview"

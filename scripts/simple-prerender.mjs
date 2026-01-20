@@ -8,11 +8,21 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = 'http://localhost:4173';
+const BASE_URL = process.env.PREVIEW_URL || 'http://localhost:4173';
 const DIST_PATH = path.resolve(__dirname, '../dist');
 
+// Lire les activités pour générer les routes dynamiques
+const activitiesPath = path.resolve(__dirname, '../src/data/activities.ts');
+const activitiesContent = fs.readFileSync(activitiesPath, 'utf-8');
+
+// Extraire les slugs des activités
+const slugMatches = [...activitiesContent.matchAll(/slug:\s*[\"']([^\"']+)[\"']/g)];
+const activitySlugs = slugMatches.map(match => `activite/${match[1]}`);
+
+console.log(`📊 Found ${activitySlugs.length} activities to prerender\n`);
+
 // Routes statiques
-const routes = [
+const staticRoutes = [
   '',
   'activites-famille-reunion',
   'activites-couple-reunion',
@@ -28,6 +38,9 @@ const routes = [
   'politique-confidentialite',
   'cgu'
 ];
+
+// Combiner les routes statiques et dynamiques
+const routes = [...staticRoutes, ...activitySlugs];
 
 async function prerenderPage(browser, route) {
   const page = await browser.newPage();
