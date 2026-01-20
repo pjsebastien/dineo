@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin or internal pages if any
+Disallow: /sitemap-generator
+
+# Sitemap
+Sitemap: https://dineo.re/sitemap.xml

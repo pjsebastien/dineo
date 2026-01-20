@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(start npm run dev)",
+      "Bash(node:*)",
+      "Bash(npm --version)",
+      "Bash(where npm:*)",
+      "Bash(cmd /c \"npm --version\")",
+      "Bash(test:*)",
+      "Bash(npm install:*)",
+      "Bash(/c/Program Files/nodejs/npm.cmd install)",
+      "Bash(/c/Program Files/nodejs/npm.cmd run dev)",
+      "Bash(/c/Program Files/nodejs/npm.cmd install --save-dev vite-plugin-prerender)",
+      "Bash(/c/Program Files/nodejs/npm.cmd uninstall vite-plugin-prerender)",
+      "Bash(/c/Program Files/nodejs/npm.cmd install --save-dev vite-plugin-static-copy)",
+      "Bash(/c/Program Files/nodejs/npm.cmd install --save-dev vite-plugin-ssg vite-ssg @vitejs/plugin-react-swc)",
+      "Bash(/c/Program Files/nodejs/npm.cmd install --save-dev puppeteer)",
+      "Bash(/c/Program Files/nodejs/npm.cmd install --save-dev react-snap)",
+      "Bash(taskkill:*)",
+      "Bash(/c/Program Files/nodejs/npm.cmd install --save-dev @gfxlabs/react-snap)",
+      "Bash(/c/Program Files/nodejs/npm.cmd run build)",
+      "Bash(/c/Program Files/nodejs/npm.cmd run build:vite)",
+      "Bash(/c/Program Files/nodejs/npm.cmd run preview)",
+      "Bash(curl:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
