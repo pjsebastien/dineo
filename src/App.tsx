@@ -124,10 +124,10 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Dineo - Activités à La Réunion | Réservation en ligne</title>
+        <title>Découvrez et réservez + de 60 activités à faire à La Réunion</title>
         <meta name="description" content="Découvrez et réservez les meilleures activités à La Réunion : randonnées, plongée, parapente, quad. Annulation flexible et prix garantis." />
         <meta name="keywords" content="activités la réunion, activité la réunion, activités île de la réunion, que faire à la réunion, réservation activités réunion" />
-        <meta property="og:title" content="Dineo - Activités à La Réunion" />
+        <meta property="og:title" content="Découvrez et réservez + de 60 activités à faire à La Réunion" />
         <meta property="og:description" content="Réservez les meilleures activités à La Réunion en quelques clics" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://dineo.re" />
