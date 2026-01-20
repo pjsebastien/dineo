@@ -42,7 +42,8 @@
       "Bash(./node_modules/.bin/vite:*)",
       "Bash(npm run build:client:*)",
       "Bash(grep:*)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(npm run generate:*)"
     ]
   }
 }

@@ -144,9 +144,13 @@ const urls = [
 ];
 
 console.log(`\n📊 Generating ${urls.length} HTML pages...\n`);
+console.log(`📝 Found ${activitySlugs.length} activities\n`);
 
 // Lire le template HTML
 const template = fs.readFileSync(path.resolve(__dirname, 'dist/index.html'), 'utf-8');
+
+// Calculer le nombre d'activités pour l'utiliser dans le titre de la page d'accueil
+const activitiesCount = activitySlugs.length;
 
 // Charger le module SSR
 const { render } = await import('./dist-ssr/entry-server.js');
@@ -159,10 +163,22 @@ for (const url of urls) {
     console.log(`  [${++count}/${urls.length}] Rendering ${url}`);
 
     // 1. Génère le HTML de la page avec SSR
-    const appHtml = await render(url);
+    const { html: appHtml, helmet: helmetContext } = await render(url);
 
     // 2. Remplace le placeholder dans index.html
-    const html = template.replace('<!--app-html-->', appHtml);
+    let html = template.replace('<!--app-html-->', appHtml);
+
+    // 3. Pour la page d'accueil uniquement, remplacer le titre dynamiquement avec le nombre d'activités
+    if (url === '/') {
+      html = html.replace(
+        /<title>.*?<\/title>/,
+        `<title>Découvrez et réservez ${activitiesCount} activités à faire à La Réunion</title>`
+      );
+      html = html.replace(
+        /property="og:title" content="[^"]*"/,
+        `property="og:title" content="Découvrez et réservez ${activitiesCount} activités à faire à La Réunion"`
+      );
+    }
 
     // 3. Détermine le chemin de sortie
     const filePath = url === '/'

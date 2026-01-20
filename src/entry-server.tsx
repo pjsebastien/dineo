@@ -1,15 +1,21 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { AppRoutes } from './App';
 
 export function render(url: string) {
+  const helmetContext = {};
+
   const html = ReactDOMServer.renderToString(
     <React.StrictMode>
-      <StaticRouter location={url}>
-        <AppRoutes />
-      </StaticRouter>
+      <HelmetProvider context={helmetContext}>
+        <StaticRouter location={url}>
+          <AppRoutes />
+        </StaticRouter>
+      </HelmetProvider>
     </React.StrictMode>
   );
-  return html;
+
+  return { html, helmet: helmetContext };
 }
