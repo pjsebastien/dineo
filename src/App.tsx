@@ -328,29 +328,36 @@ const HomePage: React.FC = () => {
   );
 };
 
+// Export les routes pour SSR
+export function AppRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/activite/:slug" element={<ActivityPage />} />
+      <Route path="/activites-famille-reunion" element={<FamilyActivitiesPage />} />
+      <Route path="/activites-couple-reunion" element={<CoupleActivitiesPage />} />
+      <Route path="/activites-insolites-reunion" element={<UnusualActivitiesPage />} />
+      <Route path="/activites-pas-cheres-reunion" element={<BudgetActivitiesPage />} />
+      <Route path="/activites-a-offrir-reunion" element={<GiftActivitiesPage />} />
+      <Route path="/que-faire-saint-pierre-reunion" element={<SaintPierrePage />} />
+      <Route path="/que-faire-saint-leu-reunion" element={<SaintLeuPage />} />
+      <Route path="/que-faire-cilaos-reunion" element={<CilaosPage />} />
+      <Route path="/que-faire-piton-fournaise-reunion" element={<PitonFournaisePage />} />
+      <Route path="/que-faire-saint-benoit-reunion" element={<SaintBenoitPage />} />
+      <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
+      <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
+      <Route path="/cgu" element={<CGVPage />} />
+      <Route path="/sitemap-generator" element={<SitemapGenerator />} />
+      <Route path="/:path" element={<RedirectComponent />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
+  );
+}
+
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/activite/:slug" element={<ActivityPage />} />
-        <Route path="/activites-famille-reunion" element={<FamilyActivitiesPage />} />
-        <Route path="/activites-couple-reunion" element={<CoupleActivitiesPage />} />
-        <Route path="/activites-insolites-reunion" element={<UnusualActivitiesPage />} />
-        <Route path="/activites-pas-cheres-reunion" element={<BudgetActivitiesPage />} />
-        <Route path="/activites-a-offrir-reunion" element={<GiftActivitiesPage />} />
-        <Route path="/que-faire-saint-pierre-reunion" element={<SaintPierrePage />} />
-        <Route path="/que-faire-saint-leu-reunion" element={<SaintLeuPage />} />
-        <Route path="/que-faire-cilaos-reunion" element={<CilaosPage />} />
-        <Route path="/que-faire-piton-fournaise-reunion" element={<PitonFournaisePage />} />
-        <Route path="/que-faire-saint-benoit-reunion" element={<SaintBenoitPage />} />
-        <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
-        <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
-        <Route path="/cgu" element={<CGVPage />} />
-        <Route path="/sitemap-generator" element={<SitemapGenerator />} />
-        <Route path="/:path" element={<RedirectComponent />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <AppRoutes />
     </Router>
   );
 }

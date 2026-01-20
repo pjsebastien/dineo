@@ -32,7 +32,16 @@
       "Bash(powershell -Command \"Start-Sleep -Seconds 5\")",
       "Bash(tee:*)",
       "Bash(/c/Program Files/nodejs/npm.cmd run build:ssr)",
-      "Bash(/c/Program Files/nodejs/npm.cmd run build:client)"
+      "Bash(/c/Program Files/nodejs/npm.cmd run build:client)",
+      "Bash(ls:*)",
+      "Bash(/c/Program Files/nodejs/npm.cmd list react-router-dom)",
+      "Bash(/c/Program Files/nodejs/npm.cmd install react-helmet-async)",
+      "Bash(npm run build:ssr:*)",
+      "Bash(npx vite build:*)",
+      "Bash(node_modules/.bin/vite build --ssr src/entry-server.tsx --outDir dist-ssr)",
+      "Bash(./node_modules/.bin/vite:*)",
+      "Bash(npm run build:client:*)",
+      "Bash(grep:*)"
     ]
   }
 }
