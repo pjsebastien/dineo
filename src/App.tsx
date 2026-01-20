@@ -17,6 +17,13 @@ import SaintLeuPage from './components/SaintLeuPage';
 import CilaosPage from './components/CilaosPage';
 import PitonFournaisePage from './components/PitonFournaisePage';
 import SaintBenoitPage from './components/SaintBenoitPage';
+import MaidoPage from './components/MaidoPage';
+import SaintJosephLangevinPage from './components/SaintJosephLangevinPage';
+import SalaziePage from './components/SalaziePage';
+import SaintGillesPage from './components/SaintGillesPage';
+import LaSalineLesBainsPage from './components/LaSalineLesBainsPage';
+import PlainePalmistesPage from './components/PlainePalmistesPage';
+import SainteSuzannePage from './components/SainteSuzannePage';
 import SEOContent from './components/SEOContent';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -334,6 +341,13 @@ export function AppRoutes() {
       <Route path="/que-faire-cilaos-reunion" element={<CilaosPage />} />
       <Route path="/que-faire-piton-fournaise-reunion" element={<PitonFournaisePage />} />
       <Route path="/que-faire-saint-benoit-reunion" element={<SaintBenoitPage />} />
+      <Route path="/que-faire-maido-reunion" element={<MaidoPage />} />
+      <Route path="/que-faire-saint-joseph-langevin-reunion" element={<SaintJosephLangevinPage />} />
+      <Route path="/que-faire-cirque-salazie-reunion" element={<SalaziePage />} />
+      <Route path="/que-faire-saint-gilles-les-bains-reunion" element={<SaintGillesPage />} />
+      <Route path="/que-faire-la-saline-les-bains-reunion" element={<LaSalineLesBainsPage />} />
+      <Route path="/que-faire-plaine-palmistes-belouve-reunion" element={<PlainePalmistesPage />} />
+      <Route path="/que-faire-sainte-suzanne-reunion" element={<SainteSuzannePage />} />
       <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
       <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
       <Route path="/cgu" element={<CGVPage />} />

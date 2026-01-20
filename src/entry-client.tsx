@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import { AppRoutes } from './App';
 import './index.css';
 
 // En production, on hydrate le HTML pré-rendu
@@ -14,7 +14,7 @@ if (root.innerHTML) {
     root,
     <React.StrictMode>
       <BrowserRouter>
-        <App />
+        <AppRoutes />
       </BrowserRouter>
     </React.StrictMode>
   );
@@ -23,7 +23,7 @@ if (root.innerHTML) {
   ReactDOM.createRoot(root).render(
     <React.StrictMode>
       <BrowserRouter>
-        <App />
+        <AppRoutes />
       </BrowserRouter>
     </React.StrictMode>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { ArrowLeft, MapPin, Waves, TreePine, Mountain } from 'lucide-react';
+import { ArrowLeft, Mountain, Droplets, Waves, TreePine } from 'lucide-react';
 import { activities } from '../data/activities';
 import ActivityCard from './ActivityCard';
 import Header from './Header';
@@ -23,37 +23,37 @@ const SaintBenoitPage: React.FC = () => {
 
   const faqs = [
     {
-      question: "Quelles activités peut-on faire à Saint-Benoît ?",
-      answer: "Saint-Benoît propose des balades à cheval au Grand Étang dans un cadre naturel préservé, du rafting sur la rivière des Marsouins, et l'accès aux randonnées vers la Plaine des Palmistes. Cette région authentique de l'est offre des expériences nature variées loin des foules touristiques."
+      question: "Quelles sont les meilleures activités à faire à Saint-Benoît ?",
+      answer: "Saint-Benoît propose des activités aquatiques et équestres exceptionnelles. Le canyoning dans la Rivière des Marsouins et le Bassin Bœuf offre des descentes adaptées à tous niveaux avec sauts, toboggans naturels et rappels. Les balades à cheval permettent de découvrir la nature sauvage de l'est, entre cascades et forêts luxuriantes."
     },
     {
-      question: "La balade à cheval au Grand Étang est-elle accessible aux débutants ?",
-      answer: "Absolument ! Les balades à cheval au Grand Étang sont spécialement conçues pour accueillir les débutants. Les chevaux sont calmes et habitués aux novices, l'encadrement est attentionné, et le rythme s'adapte au niveau du groupe. C'est une excellente initiation à l'équitation en milieu naturel."
+      question: "Pourquoi choisir Saint-Benoît pour ses activités nature ?",
+      answer: "Saint-Benoît est la porte d'entrée du Piton de la Fournaise par l'est et offre une nature préservée et authentique. Les rivières comme la Rivière des Marsouins abritent des bassins cristallins parfaits pour le canyoning. Le climat plus humide garantit une végétation luxuriante et des cascades permanentes tout au long de l'année."
     },
     {
-      question: "Le rafting sur la rivière des Marsouins est-il sécurisé ?",
-      answer: "Oui, le rafting sur la rivière des Marsouins est encadré par des guides diplômés avec tout l'équipement de sécurité fourni (raft, casque, gilet, combinaison). Le parcours est adapté selon le niveau d'eau et convient aux familles dès 8 ans. Les rapides sont ludiques sans être dangereux."
+      question: "Combien coûtent les activités à Saint-Benoît ?",
+      answer: "Les activités à Saint-Benoît sont accessibles et variées. Le canyoning dans le Bassin Bœuf ou la Rivière des Marsouins coûte environ 60-80€ pour une demi-journée. Les balades équestres varient de 40€ à 90€ selon la durée. Ces tarifs incluent l'encadrement diplômé et tout le matériel de sécurité nécessaire."
     },
     {
-      question: "Quelle est la particularité du Grand Étang ?",
-      answer: "Le Grand Étang est un site naturel préservé de l'est de La Réunion, caractérisé par ses paysages de forêt tropicale humide, ses étangs naturels et sa tranquillité. C'est un écrin de verdure idéal pour les balades à cheval contemplatives, loin de l'agitation touristique de l'ouest."
+      question: "Quelle est la meilleure période pour les activités à Saint-Benoît ?",
+      answer: "Le canyoning se pratique toute l'année à Saint-Benoît grâce au climat humide de l'est. La saison sèche (mai à octobre) offre des conditions optimales avec des débits d'eau modérés. Évitez les périodes de fortes pluies et de cyclones (janvier-mars) où les rivières peuvent être dangereuses."
     },
     {
-      question: "Comment se rendre à Saint-Benoît depuis les autres régions ?",
-      answer: "Saint-Benoît se situe sur la côte est, accessible par la route du littoral depuis Saint-Denis (45 min) ou par la route des Plaines depuis Saint-Pierre (1h15). La région est moins fréquentée que l'ouest, offrant une découverte plus authentique de La Réunion."
+      question: "Comment se rendre aux sites d'activités depuis Saint-Benoît ?",
+      answer: "Saint-Benoît est accessible par la route nationale depuis Saint-Denis (45 minutes). Les départs de canyoning se font depuis différents points : Bassin La Paix, Bassin Bœuf, Rivière des Marsouins. Les prestataires indiquent précisément les lieux de rendez-vous. Un véhicule est recommandé pour accéder aux sites naturels."
     },
     {
-      question: "Peut-on combiner plusieurs activités à Saint-Benoît ?",
-      answer: "Oui, Saint-Benoît permet de combiner balade à cheval au Grand Étang le matin et rafting sur la rivière des Marsouins l'après-midi. La proximité des sites facilite l'organisation. Ajoutez la visite de la vanilleraie ou du temple tamoul pour une journée complète."
+      question: "Les activités à Saint-Benoît sont-elles adaptées aux débutants ?",
+      answer: "Absolument ! Les canyons de Saint-Benoît proposent des parcours variés adaptés à tous les niveaux. Le Bassin Bœuf convient aux familles et débutants avec des sauts facultatifs. Les moniteurs diplômés adaptent les parcours selon les capacités de chacun. Les balades à cheval sont également accessibles aux cavaliers débutants."
     }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Que faire à Saint-Benoît à La Réunion ? | Nature et Authenticité</title>
-        <meta name="description" content="Découvrez les activités à Saint-Benoît : balades à cheval Grand Étang, rafting rivière Marsouins. Guide de l'est authentique de La Réunion, loin des foules." />
-        <meta name="keywords" content="que faire saint-benoît réunion, grand étang saint-benoît, rafting marsouins, balade cheval saint-benoît, est réunion activités" />
+        <title>Que faire à Saint-Benoît à La Réunion ? | Activités et Visites</title>
+        <meta name="description" content="Découvrez les activités à Saint-Benoît : canyoning Rivière des Marsouins, Bassin Bœuf, balades à cheval, accès Piton de la Fournaise. Nature sauvage de l'est." />
+        <meta name="keywords" content="que faire saint-benoît réunion, activités saint-benoît, canyoning saint-benoît, bassin bœuf, rivière marsouins, cheval saint-benoît réunion" />
         <link rel="canonical" href="https://dineo.re/que-faire-saint-benoit-reunion" />
       </Helmet>
 
@@ -72,26 +72,26 @@ const SaintBenoitPage: React.FC = () => {
         </Link>
 
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl text-white p-8 mb-12">
+        <div className="bg-gradient-to-r from-green-600 to-emerald-700 rounded-2xl text-white p-8 mb-12">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Que faire à Saint-Benoît à La Réunion ?
             </h1>
             <p className="text-xl md:text-2xl mb-6 text-green-100">
-              Découvrez {saintBenoitActivities.length} activités dans l'est authentique et préservé de l'île
+              Découvrez {saintBenoitActivities.length} activités dans la nature sauvage de l'est
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                <TreePine className="w-5 h-5 mr-2" />
-                <span>Nature préservée</span>
+                <Waves className="w-5 h-5 mr-2" />
+                <span>Canyoning & cascades</span>
               </div>
               <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                <Waves className="w-5 h-5 mr-2" />
-                <span>Rivières sauvages</span>
+                <TreePine className="w-5 h-5 mr-2" />
+                <span>Balades équestres</span>
               </div>
               <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Mountain className="w-5 h-5 mr-2" />
-                <span>Authenticité créole</span>
+                <span>Porte du volcan Est</span>
               </div>
             </div>
           </div>
@@ -132,108 +132,90 @@ const SaintBenoitPage: React.FC = () => {
           
           <div className="prose prose-lg max-w-none text-gray-700">
             <p className="text-xl text-gray-600 mb-6">
-              <strong>Saint-Benoît</strong> représente l'authenticité réunionnaise loin des circuits touristiques classiques. Cette commune de l'est de l'île offre des expériences nature préservées : balades à cheval dans des écrins de verdure, rafting sur rivières sauvages et découverte de la culture créole traditionnelle.
+              <strong>Saint-Benoît</strong> est la commune la plus à l'est de La Réunion, réputée pour sa nature sauvage et préservée. Cette région humide et verdoyante offre des rivières cristallines, des cascades spectaculaires et un accès privilégié au Piton de la Fournaise par la route forestière de la Plaine des Palmistes.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Le Grand Étang : écrin naturel pour balades équestres
+              Canyoning dans les rivières de Saint-Benoît
             </h3>
             <p className="mb-4">
-              Les <strong>balades à cheval au Grand Étang</strong> constituent l'activité phare de Saint-Benoît. Ce site naturel préservé, niché dans la forêt tropicale humide de l'est, offre un cadre enchanteur pour découvrir l'équitation. Les chevaux calmes et habitués aux débutants permettent une approche douce de cette activité dans un environnement exceptionnel.
+              Les <strong>activités à Saint-Benoît</strong> sont dominées par le canyoning dans les nombreuses rivières qui dévalent les pentes du volcan. La Rivière des Marsouins propose plusieurs parcours adaptés à différents niveaux : du canyon découverte familial aux descentes sportives pour les plus aventureux. Les bassins successifs offrent sauts, toboggans naturels et rappels dans une eau pure et rafraîchissante.
             </p>
             <p className="mb-6">
-              Ces <strong>activités équestres à Saint-Benoît</strong> se déroulent sur 2 heures, incluant initiation et balade encadrée. Les paysages du Grand Étang, avec ses étangs naturels, sa végétation luxuriante et sa tranquillité, créent une atmosphère apaisante idéale pour les familles et les amateurs de nature. L'encadrement attentionné adapte le rythme au niveau de chaque cavalier.
+              Le <strong>Bassin Bœuf</strong> est l'un des sites phares de Saint-Benoît, accessible depuis la Rivière des Marsouins ou la Rivière Sainte-Suzanne. Ce canyon ludique convient parfaitement aux familles et débutants avec ses sauts facultatifs de 3 à 7 mètres, ses toboggans naturels et ses vasques cristallines. L'encadrement par des moniteurs diplômés garantit sécurité et plaisir dans ces décors exceptionnels.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Rafting sur la rivière des Marsouins
+              Balades à cheval dans la nature sauvage
             </h3>
             <p className="mb-4">
-              Le <strong>rafting à Saint-Benoît</strong> sur la rivière des Marsouins propose une descente ludique de 3 heures dans un cadre verdoyant préservé. Cette activité familiale, accessible dès 8 ans, combine sport nautique et découverte de la végétation tropicale qui borde les rives de cette rivière de l'est.
+              <strong>Visiter Saint-Benoît à La Réunion</strong> à cheval offre une perspective unique sur cette région préservée. Les centres équestres locaux proposent des randonnées dans les hauts de Saint-Benoît, traversant champs de cannes, forêts tropicales et points de vue sur l'océan. Ces balades permettent de découvrir la faune et la flore endémiques tout en profitant de la quiétude des paysages de l'est.
             </p>
             <p className="mb-6">
-              Les <strong>activités nautiques à Saint-Benoît</strong> incluent cette expérience rafraîchissante avec équipement complet fourni (raft, casque, gilet, combinaison) et encadrement par des guides expérimentés. Le parcours variable selon le niveau d'eau offre rapides ludiques et passages plus calmes pour admirer la nature environnante. Cette alternative aux activités de l'ouest révèle une facette différente de La Réunion.
+              Les parcours équestres s'adaptent à tous les niveaux, du débutant au cavalier confirmé. Les guides locaux partagent leur connaissance du territoire, pointant les plantes médicinales, les oiseaux endémiques et les sites historiques. Ces <strong>sorties à cheval depuis Saint-Benoît</strong> durent de 1 à 3 heures selon les formules choisies.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Découverte de l'est authentique
+              Porte d'entrée Est du Piton de la Fournaise
             </h3>
             <p className="mb-4">
-              <strong>Visiter Saint-Benoît</strong> permet de découvrir une région moins touristique mais riche en authenticité créole. Cette commune de l'est a conservé son caractère rural et traditionnel, avec ses champs de canne à sucre, ses vanilleraies et ses temples tamouls colorés qui témoignent de la diversité culturelle réunionnaise.
+              <strong>Que faire à Saint-Benoît</strong> pour découvrir le volcan ? La commune constitue le point de départ de l'accès Est au Piton de la Fournaise via la route forestière qui monte à la Plaine des Palmistes puis au Pas de Bellecombe. Cet itinéraire moins fréquenté que l'accès Sud offre des paysages magnifiques et une approche progressive du volcan.
             </p>
             <p className="mb-6">
-              Les <strong>activités culturelles à Saint-Benoît</strong> incluent la visite de la vanilleraie du Grand Hazier, où l'on découvre les secrets de cette épice précieuse, et l'exploration du temple Gol Govindin, l'un des plus beaux temples tamouls de l'île. Ces découvertes complètent parfaitement les activités nature pour une immersion complète dans l'est réunionnais.
+              La route traverse différents étages de végétation, des forêts luxuriantes de basse altitude aux paysages lunaires de haute altitude. Les points de vue sur la côte est et l'océan Indien sont spectaculaires. Cette <strong>excursion depuis Saint-Benoît</strong> permet de combiner découverte du volcan et exploration de la région orientale de l'île.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Porte d'entrée vers les Hauts de l'Est
+              Les cascades et bassins : trésors naturels de l'est
             </h3>
             <p className="mb-4">
-              <strong>Que faire à Saint-Benoît</strong> pour les amateurs de randonnée ? La commune constitue le point de départ idéal vers la Plaine des Palmistes et les Hauts de l'Est. Ces régions d'altitude offrent des paysages tempérés contrastant avec la luxuriance tropicale du littoral, créant une diversité remarquable sur de courtes distances.
+              Saint-Benoît et ses environs abritent de nombreuses <strong>cascades accessibles</strong> pour la baignade et la détente. Le Bassin La Paix, niché dans la végétation tropicale, offre un cadre idyllique pour se rafraîchir après une randonnée. Ces sites naturels restent préservés du tourisme de masse et conservent leur authenticité.
             </p>
             <p className="mb-6">
-              Les sentiers de randonnée depuis Saint-Benoît mènent vers des sites préservés : forêt de Bébour-Bélouve, cascade du Voile de la Mariée, ou encore les sentiers botaniques de la Plaine des Palmistes. Ces <strong>randonnées depuis Saint-Benoît</strong> révèlent la richesse de la flore endémique réunionnaise dans des environnements moins fréquentés.
+              La Rivière des Marsouins, qui prend sa source dans les hauts de l'île, descend en cascade jusqu'à l'océan. Son parcours crée des bassins naturels aux eaux cristallines, parfaits pour les activités aquatiques. Le climat humide de l'est garantit des débits importants même en saison sèche, assurant des conditions optimales pour le canyoning toute l'année.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Climat et spécificités de l'est
+              Culture et patrimoine de Saint-Benoît
             </h3>
             <p className="mb-4">
-              Les <strong>activités à Saint-Benoît à La Réunion</strong> bénéficient du climat tropical humide de l'est, plus arrosé que l'ouest mais créant cette végétation luxuriante caractéristique. Cette humidité naturelle maintient la fraîcheur des sous-bois et alimente les rivières qui permettent les activités nautiques.
+              Au-delà des <strong>activités nature à Saint-Benoît</strong>, la ville possède un riche patrimoine culturel. L'église Sainte-Anne, avec ses fresques colorées réalisées par des artistes tamouls, témoigne du métissage culturel réunionnais. Le marché forain propose fruits tropicaux, épices et spécialités locales dans une atmosphère authentique.
             </p>
             <p className="mb-6">
-              Cette spécificité climatique influence le choix des activités : les balades à cheval matinales évitent les averses d'après-midi, tandis que le rafting profite des débits soutenus des rivières. Cette adaptation aux conditions locales fait partie du charme de la découverte de l'est réunionnais, plus sauvage et authentique.
+              Les champs de vanille et de cannes à sucre entourent la ville, offrant des visites guidées pour découvrir ces cultures emblématiques de La Réunion. Les gousses de vanille Bourbon, cultivées traditionnellement dans la région, constituent un souvenir parfumé apprécié. Cette dimension culturelle enrichit la découverte sportive du territoire.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Gastronomie et artisanat local
+              Conseils pratiques pour votre séjour à Saint-Benoît
             </h3>
             <p className="mb-4">
-              <strong>Saint-Benoît à La Réunion</strong> révèle une gastronomie créole authentique dans ses restaurants familiaux et tables d'hôtes. Les spécialités locales incluent curry de poisson frais, rougail saucisse traditionnel et desserts à base de fruits tropicaux cultivés localement. Cette cuisine familiale contraste avec l'offre plus touristique de l'ouest.
+              Pour profiter pleinement des <strong>activités à faire à Saint-Benoît</strong>, prévoyez des vêtements imperméables car le climat de l'est est le plus humide de l'île. Les après-midis sont souvent pluvieux, privilégiez donc les activités matinales. Pour le canyoning, suivez scrupuleusement les consignes de sécurité et vérifiez la météo avant de partir.
             </p>
             <p className="mb-6">
-              L'artisanat saint-benoîtois perpétue les traditions créoles : vannerie en vacoa, sculpture sur bois, et bien sûr la transformation de la vanille. Ces savoir-faire traditionnels se découvrent dans les ateliers locaux et enrichissent la compréhension de la culture réunionnaise au-delà des activités sportives.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Avantages de choisir l'est pour ses activités
-            </h3>
-            <p className="mb-4">
-              Les <strong>activités à faire à Saint-Benoît</strong> offrent plusieurs avantages : tarifs souvent plus abordables, groupes plus restreints, contact privilégié avec les prestataires locaux et découverte d'une région moins connue mais tout aussi belle. Cette approche permet une expérience plus personnalisée et authentique.
-            </p>
-            <p className="mb-6">
-              La moindre fréquentation touristique de l'est garantit des expériences plus intimes avec la nature et les habitants. Les guides locaux partagent volontiers leurs connaissances sur leur région, créant des échanges enrichissants impossibles dans les zones sur-touristiques. Cette dimension humaine ajoute une valeur inestimable aux activités.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Conseils pratiques pour votre découverte de Saint-Benoît
-            </h3>
-            <p className="mb-4">
-              Pour optimiser vos <strong>activités à Saint-Benoît</strong>, prévoyez des vêtements adaptés au climat humide : veste imperméable légère, chaussures fermées antidérapantes, et vêtements de rechange. L'est étant plus arrosé, cette préparation garantit le confort même en cas d'averse tropicale.
-            </p>
-            <p className="mb-6">
-              Planifiez vos activités en matinée quand les conditions sont souvent plus stables, et gardez l'après-midi pour les découvertes culturelles à l'abri. Cette organisation permet de profiter pleinement des spécificités de l'est tout en s'adaptant à son climat particulier. N'oubliez pas l'anti-moustique, plus nécessaire qu'à l'ouest.
+              Saint-Benoît se situe à 45 minutes de Saint-Denis par la route nationale côtière. La ville offre restaurants créoles, hébergements et commerces pour faciliter votre séjour. Les prestataires d'activités fournissent tout le matériel nécessaire : combinaisons néoprène, casques, baudriers et chaussures adaptées pour le canyoning. Réservez vos activités à l'avance, surtout en haute saison touristique.
             </p>
 
             <div className="bg-green-50 p-6 rounded-lg mt-8">
               <h4 className="text-xl font-semibold text-gray-900 mb-4">
-                Journée découverte à Saint-Benoît
+                Programme type d'une journée à Saint-Benoît
               </h4>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h5 className="font-semibold text-gray-900 mb-2">Matinée nature</h5>
+                  <h5 className="font-semibold text-gray-900 mb-2">Matinée</h5>
                   <ul className="text-gray-700 space-y-1">
-                    <li>• 8h : Balade à cheval Grand Étang (2h)</li>
-                    <li>• 10h30 : Découverte vanilleraie</li>
-                    <li>• 12h : Déjeuner créole authentique</li>
+                    <li>• 8h : Départ pour le canyoning Bassin Bœuf</li>
+                    <li>• 8h30 : Briefing et équipement</li>
+                    <li>• 9h-12h : Descente de canyon (sauts, toboggans)</li>
+                    <li>• 12h : Retour et déjeuner créole</li>
                   </ul>
                 </div>
                 <div>
-                  <h5 className="font-semibold text-gray-900 mb-2">Après-midi aventure</h5>
+                  <h5 className="font-semibold text-gray-900 mb-2">Après-midi</h5>
                   <ul className="text-gray-700 space-y-1">
-                    <li>• 14h : Rafting rivière Marsouins (3h)</li>
-                    <li>• 17h : Visite temple tamoul</li>
-                    <li>• 18h : Coucher de soleil côte est</li>
+                    <li>• 14h : Balade à cheval dans les hauts</li>
+                    <li>• 16h : Visite des champs de vanille</li>
+                    <li>• 17h : Découverte église Sainte-Anne</li>
+                    <li>• 18h : Marché forain et spécialités locales</li>
                   </ul>
                 </div>
               </div>

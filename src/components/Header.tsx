@@ -128,6 +128,27 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
                     <Link to="/que-faire-saint-benoit-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Saint-Benoît
                     </Link>
+                    <Link to="/que-faire-maido-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                      Maïdo
+                    </Link>
+                    <Link to="/que-faire-saint-joseph-langevin-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                      Saint-Joseph / Langevin
+                    </Link>
+                    <Link to="/que-faire-cirque-salazie-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                      Cirque de Salazie
+                    </Link>
+                    <Link to="/que-faire-saint-gilles-les-bains-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                      Saint-Gilles-Les-Bains
+                    </Link>
+                    <Link to="/que-faire-la-saline-les-bains-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                      La Saline Les Bains
+                    </Link>
+                    <Link to="/que-faire-plaine-palmistes-belouve-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                      Plaine des Palmistes
+                    </Link>
+                    <Link to="/que-faire-sainte-suzanne-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                      Sainte-Suzanne
+                    </Link>
                   </div>
                 </div>
               </div>
