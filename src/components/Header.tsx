@@ -108,6 +108,9 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
                     <Link to="/canyoning-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       🌊 Canyoning
                     </Link>
+                    <Link to="/randonnees-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                      🥾 Randonnées
+                    </Link>
                     <Link to="/location-van-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       🚐 Location de van
                     </Link>
@@ -417,6 +420,9 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
             </Link>
             <Link to="/canyoning-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               🌊 Canyoning
+            </Link>
+            <Link to="/randonnees-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+              🥾 Randonnées
             </Link>
             <Link to="/location-van-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               🚐 Location de van

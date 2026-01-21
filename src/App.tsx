@@ -28,6 +28,7 @@ import AboutPage from './components/AboutPage';
 import HorseRidingPage from './components/HorseRidingPage';
 import CanyoningPage from './components/CanyoningPage';
 import VanRentalPage from './components/VanRentalPage';
+import HikingPage from './components/HikingPage';
 import SEOContent from './components/SEOContent';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -356,6 +357,7 @@ export function AppRoutes() {
       <Route path="/balades-cheval-reunion" element={<HorseRidingPage />} />
       <Route path="/canyoning-reunion" element={<CanyoningPage />} />
       <Route path="/location-van-reunion" element={<VanRentalPage />} />
+      <Route path="/randonnees-reunion" element={<HikingPage />} />
       <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
       <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
       <Route path="/cgu" element={<CGVPage />} />

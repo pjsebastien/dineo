@@ -171,7 +171,14 @@ const ActivityPage: React.FC = () => {
             <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Points forts</h2>
               <div className="bg-blue-50 p-4 rounded-lg">
-                <p className="text-gray-800">{activity.points_forts}</p>
+                <ul className="space-y-2">
+                  {activity.points_forts.split(';').map((point, index) => (
+                    <li key={index} className="flex items-start text-gray-800">
+                      <span className="text-blue-600 mr-2 mt-1">•</span>
+                      <span>{point.trim()}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
@@ -193,7 +200,16 @@ const ActivityPage: React.FC = () => {
                     <Info className="w-5 h-5 mr-2 text-orange-600" />
                     À prévoir
                   </h3>
-                  <p className="text-gray-700 bg-orange-50 p-3 rounded-lg">{activity.a_prevoir}</p>
+                  <div className="bg-orange-50 p-3 rounded-lg">
+                    <ul className="space-y-2">
+                      {activity.a_prevoir.split(';').map((item, index) => (
+                        <li key={index} className="flex items-start text-gray-700">
+                          <span className="text-orange-600 mr-2 mt-1">•</span>
+                          <span>{item.trim()}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
 
