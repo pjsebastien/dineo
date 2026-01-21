@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Search, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ScrollLink from './ScrollLink';
 import { activities } from '../data/activities';
 import { Activity } from '../types/Activity';
 
@@ -86,34 +87,34 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
                 </button>
                 <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
-                    <Link to="/activites-famille-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    <ScrollLink to="/activites-famille-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Activités en famille
-                    </Link>
-                    <Link to="/activites-couple-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/activites-couple-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Activités en couple
-                    </Link>
-                    <Link to="/activites-insolites-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/activites-insolites-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Activités insolites
-                    </Link>
-                    <Link to="/activites-pas-cheres-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/activites-pas-cheres-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Activités pas chères
-                    </Link>
-                    <Link to="/activites-a-offrir-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/activites-a-offrir-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Activités à offrir
-                    </Link>
+                    </ScrollLink>
                     <div className="border-t border-gray-200 my-2"></div>
-                    <Link to="/balades-cheval-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    <ScrollLink to="/balades-cheval-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       🐴 Balades à cheval
-                    </Link>
-                    <Link to="/canyoning-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/canyoning-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       🌊 Canyoning
-                    </Link>
-                    <Link to="/randonnees-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/randonnees-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       🥾 Randonnées
-                    </Link>
-                    <Link to="/location-van-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/location-van-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       🚐 Location de van
-                    </Link>
+                    </ScrollLink>
                   </div>
                 </div>
               </div>
@@ -126,51 +127,51 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
                 </button>
                 <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
-                    <Link to="/que-faire-saint-pierre-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    <ScrollLink to="/que-faire-saint-pierre-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Saint-Pierre
-                    </Link>
-                    <Link to="/que-faire-saint-leu-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/que-faire-saint-leu-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Saint-Leu
-                    </Link>
-                    <Link to="/que-faire-cilaos-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/que-faire-cilaos-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Cilaos
-                    </Link>
-                    <Link to="/que-faire-piton-fournaise-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/que-faire-piton-fournaise-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Piton de la Fournaise
-                    </Link>
-                    <Link to="/que-faire-saint-benoit-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/que-faire-saint-benoit-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Saint-Benoît
-                    </Link>
-                    <Link to="/que-faire-maido-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/que-faire-maido-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Maïdo
-                    </Link>
-                    <Link to="/que-faire-saint-joseph-langevin-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/que-faire-saint-joseph-langevin-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Saint-Joseph / Langevin
-                    </Link>
-                    <Link to="/que-faire-cirque-salazie-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/que-faire-cirque-salazie-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Cirque de Salazie
-                    </Link>
-                    <Link to="/que-faire-saint-gilles-les-bains-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/que-faire-saint-gilles-les-bains-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Saint-Gilles-Les-Bains
-                    </Link>
-                    <Link to="/que-faire-la-saline-les-bains-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/que-faire-la-saline-les-bains-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       La Saline Les Bains
-                    </Link>
-                    <Link to="/que-faire-plaine-palmistes-belouve-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/que-faire-plaine-palmistes-belouve-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Plaine des Palmistes
-                    </Link>
-                    <Link to="/que-faire-sainte-suzanne-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    </ScrollLink>
+                    <ScrollLink to="/que-faire-sainte-suzanne-reunion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                       Sainte-Suzanne
-                    </Link>
+                    </ScrollLink>
                   </div>
                 </div>
               </div>
-              <Link to="/blog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              <ScrollLink to="/blog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Blog
-              </Link>
-              <Link to="/a-propos" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              </ScrollLink>
+              <ScrollLink to="/a-propos" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 À propos
-              </Link>
+              </ScrollLink>
             </nav>
 
             <div className="flex items-center space-x-4">
@@ -384,92 +385,92 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
                 </div>
               )}
             </div>
-            <Link
+            <ScrollLink
               to="/a-propos"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               À propos
-            </Link>
-            
+            </ScrollLink>
+
             <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">
               Activités
             </div>
-            <Link to="/activites-famille-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            <ScrollLink to="/activites-famille-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Activités en famille
-            </Link>
-            <Link to="/activites-couple-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/activites-couple-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Activités en couple
-            </Link>
-            <Link to="/activites-insolites-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/activites-insolites-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Activités insolites
-            </Link>
-            <Link to="/activites-pas-cheres-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/activites-pas-cheres-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Activités pas chères
-            </Link>
-            <Link to="/activites-a-offrir-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/activites-a-offrir-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Activités à offrir
-            </Link>
-            <Link to="/balades-cheval-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/balades-cheval-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               🐴 Balades à cheval
-            </Link>
-            <Link to="/canyoning-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/canyoning-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               🌊 Canyoning
-            </Link>
-            <Link to="/randonnees-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/randonnees-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               🥾 Randonnées
-            </Link>
-            <Link to="/location-van-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/location-van-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               🚐 Location de van
-            </Link>
+            </ScrollLink>
 
-            <Link
+            <ScrollLink
               to="/blog"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Blog
-            </Link>
-            
+            </ScrollLink>
+
             <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2">
               Destinations
             </div>
-            <Link to="/que-faire-saint-pierre-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            <ScrollLink to="/que-faire-saint-pierre-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Saint-Pierre
-            </Link>
-            <Link to="/que-faire-saint-leu-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/que-faire-saint-leu-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Saint-Leu
-            </Link>
-            <Link to="/que-faire-cilaos-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/que-faire-cilaos-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Cilaos
-            </Link>
-            <Link to="/que-faire-piton-fournaise-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/que-faire-piton-fournaise-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Piton de la Fournaise
-            </Link>
-            <Link to="/que-faire-saint-benoit-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/que-faire-saint-benoit-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Saint-Benoît
-            </Link>
-            <Link to="/que-faire-maido-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/que-faire-maido-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Maïdo
-            </Link>
-            <Link to="/que-faire-saint-joseph-langevin-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/que-faire-saint-joseph-langevin-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Saint-Joseph / Langevin
-            </Link>
-            <Link to="/que-faire-cirque-salazie-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/que-faire-cirque-salazie-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Cirque de Salazie
-            </Link>
-            <Link to="/que-faire-saint-gilles-les-bains-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/que-faire-saint-gilles-les-bains-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Saint-Gilles-Les-Bains
-            </Link>
-            <Link to="/que-faire-la-saline-les-bains-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/que-faire-la-saline-les-bains-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               La Saline Les Bains
-            </Link>
-            <Link to="/que-faire-plaine-palmistes-belouve-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/que-faire-plaine-palmistes-belouve-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Plaine des Palmistes
-            </Link>
-            <Link to="/que-faire-sainte-suzanne-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            </ScrollLink>
+            <ScrollLink to="/que-faire-sainte-suzanne-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Sainte-Suzanne
-            </Link>
+            </ScrollLink>
             <a
               href="#"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors"
