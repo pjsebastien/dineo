@@ -273,9 +273,16 @@ ${urls.map(url => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 
-// Écrire le fichier
+// Écrire le fichier dans public/ ET dist/ (pour le build)
 fs.writeFileSync('./public/sitemap.xml', xmlContent, 'utf-8');
-console.log(`✅ Sitemap généré avec succès!`);
+
+// Vérifier si dist/ existe et y écrire aussi
+if (fs.existsSync('./dist')) {
+  fs.writeFileSync('./dist/sitemap.xml', xmlContent, 'utf-8');
+  console.log(`✅ Sitemap généré dans public/ et dist/`);
+} else {
+  console.log(`✅ Sitemap généré dans public/`);
+}
 console.log(`   - Total URLs: ${urls.length}`);
 console.log(`   - Pages statiques: ${urls.length - activitySlugs.length}`);
 console.log(`   - Pages d'activités: ${activitySlugs.length}`);

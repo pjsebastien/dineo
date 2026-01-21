@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import NotFoundPage from './NotFoundPage';
 
 const RedirectComponent: React.FC = () => {
   const { path } = useParams<{ path: string }>();
+  const [isRedirecting, setIsRedirecting] = useState(true);
 
   useEffect(() => {
-    // Redirections vers le blog
+    // Redirections vers le blog externe
     const redirects: Record<string, string> = {
       '10-choses-incontournables-a-faire-a-la-reunion': 'https://blog.dineo.re/10-choses-incontournables-a-faire-a-la-reunion',
       'a-la-decouverte-du-rhum-reunionnais-saveurs-histoire-et-secrets-de-fabrication': 'https://blog.dineo.re/a-la-decouverte-du-rhum-reunionnais-saveurs-histoire-et-secrets-de-fabrication',
@@ -30,10 +32,20 @@ const RedirectComponent: React.FC = () => {
     };
 
     if (path && redirects[path]) {
+      // Redirection externe
       window.location.href = redirects[path];
+    } else {
+      // Pas de redirection trouvée -> afficher la page 404
+      setIsRedirecting(false);
     }
   }, [path]);
 
+  // Si pas de redirection, afficher la page 404
+  if (!isRedirecting) {
+    return <NotFoundPage />;
+  }
+
+  // Afficher le loader pendant la redirection
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="text-center">
