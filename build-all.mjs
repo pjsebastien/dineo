@@ -38,10 +38,15 @@ try {
   console.log('✅ SSR build completed!\n');
 
   // 3. Generate HTML
-  console.log('🔨 Step 3/3: Generating prerendered HTML...');
+  console.log('🔨 Step 3/4: Generating prerendered HTML...');
   await runCommand('node', ['generate-html.mjs']);
+  console.log('✅ HTML generation completed!\n');
+
+  // 4. Generate sitemap
+  console.log('🗺️  Step 4/4: Generating sitemap...');
+  await runCommand('node', ['generate-sitemap-simple.mjs']);
   console.log('\n🎉 Build completed successfully!');
-  console.log('📁 Output: dist/ directory with 43 prerendered pages\n');
+  console.log('📁 Output: dist/ directory with 43 prerendered pages + sitemap.xml\n');
 } catch (error) {
   console.error('\n❌ Build failed:', error.message);
   process.exit(1);

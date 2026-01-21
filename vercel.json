@@ -2,6 +2,111 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    {
+      "source": "/a-la-decouverte-du-rhum-reunionnais-saveurs-histoire-et-secrets-de-fabrication",
+      "destination": "/blog/rhum-reunion",
+      "permanent": true
+    },
+    {
+      "source": "/avis-et-tarifs-helicoptere-reunion",
+      "destination": "/blog/prix-helicoptere-reunion",
+      "permanent": true
+    },
+    {
+      "source": "/cascade-jacqueline",
+      "destination": "/blog/cascade-jacqueline-reunion",
+      "permanent": true
+    },
+    {
+      "source": "/cascade-niagara-la-reunion",
+      "destination": "/blog/cascade-niagara-reunion",
+      "permanent": true
+    },
+    {
+      "source": "/la-reunion-dom-ou-tom",
+      "destination": "/blog/reunion-dom-tom",
+      "permanent": true
+    },
+    {
+      "source": "/location-van-la-reunion",
+      "destination": "/blog/meilleurs-spots-van-amenage-reunion",
+      "permanent": true
+    },
+    {
+      "source": "/quelle-heure-est-il-a-la-reunion",
+      "destination": "/blog/heure-reunion",
+      "permanent": true
+    },
+    {
+      "source": "/reunion-en-janvier-avis",
+      "destination": "/blog/partir-janvier-reunion",
+      "permanent": true
+    },
+    {
+      "source": "/vacances-ile-maurice",
+      "destination": "/blog/reunion-ou-maurice",
+      "permanent": true
+    },
+    {
+      "source": "/voyager-a-la-reunion-en-mai-avis-et-meteo",
+      "destination": "/blog/partir-mai-reunion",
+      "permanent": true
+    },
+    {
+      "source": "/10-choses-incontournables-a-faire-a-la-reunion",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/canyoning-bras-rouge",
+      "destination": "/canyoning-reunion",
+      "permanent": true
+    },
+    {
+      "source": "/parapente-a-la-reunion-avis-tarifs",
+      "destination": "/activite/parapente-xl-saint-leu-reunion",
+      "permanent": true
+    },
+    {
+      "source": "/peche-au-gros-reunion",
+      "destination": "/activite/sortie-peche-au-gros-bateau-reunion",
+      "permanent": true
+    },
+    {
+      "source": "/plongee-ile-de-la-reunion",
+      "destination": "/activite/bapteme-plongee-saint-gilles-reunion-diving",
+      "permanent": true
+    },
+    {
+      "source": "/randonnee-quad-la-reunion",
+      "destination": "/activite/randonnee-quad-maido-saint-paul-reunion",
+      "permanent": true
+    },
+    {
+      "source": "/rencontre-geants-mers-reunion-2023",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/gestion-entreprise-la-reunion",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/la-cuisine-creole-a-la-reunion",
+      "destination": "/activite/cours-cuisine-creole-chez-lhabitant-saint-benoit",
+      "permanent": true
+    },
+    {
+      "source": "/trouver-un-artisan-la-reunion-974",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
