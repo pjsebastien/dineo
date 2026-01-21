@@ -2,20 +2,37 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
 
   useEffect(() => {
-    // Force scroll to top with smooth behavior disabled for immediate effect
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'instant' as ScrollBehavior
-    });
+    // Ne pas scroller si on a un paramètre de recherche et qu'on est sur la page d'accueil
+    // car le scroll vers les activités sera géré par HomePage
+    if (pathname === '/' && search.includes('search=')) {
+      return;
+    }
 
-    // Fallback for older browsers
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-  }, [pathname]);
+    // Force immediate scroll to top
+    // Utiliser un timeout de 0 pour s'assurer que le scroll se fait après le rendu
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant' as ScrollBehavior
+      });
+
+      // Fallback pour les navigateurs plus anciens
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+
+    // Scroll immédiat
+    scrollToTop();
+
+    // Scroll de secours après un court délai (pour gérer les rendus asynchrones)
+    const timeoutId = setTimeout(scrollToTop, 0);
+
+    return () => clearTimeout(timeoutId);
+  }, [pathname, search]);
 
   return null;
 };

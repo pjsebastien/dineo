@@ -2,58 +2,55 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": null,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
   "redirects": [
     {
       "source": "/a-la-decouverte-du-rhum-reunionnais-saveurs-histoire-et-secrets-de-fabrication",
-      "destination": "/blog/rhum-reunion",
+      "destination": "/blog/histoire-rhum-la-reunion",
       "permanent": true
     },
     {
       "source": "/avis-et-tarifs-helicoptere-reunion",
-      "destination": "/blog/prix-helicoptere-reunion",
+      "destination": "/blog/tarif-vol-helicoptere-la-reunion",
       "permanent": true
     },
     {
       "source": "/cascade-jacqueline",
-      "destination": "/blog/cascade-jacqueline-reunion",
+      "destination": "/blog/cascade-jacqueline-langevin",
       "permanent": true
     },
     {
       "source": "/cascade-niagara-la-reunion",
-      "destination": "/blog/cascade-niagara-reunion",
+      "destination": "/blog/cascade-niagara-la-reunion",
       "permanent": true
     },
     {
       "source": "/la-reunion-dom-ou-tom",
-      "destination": "/blog/reunion-dom-tom",
+      "destination": "/blog/la-reunion-dom-ou-tom",
       "permanent": true
     },
     {
       "source": "/location-van-la-reunion",
-      "destination": "/blog/meilleurs-spots-van-amenage-reunion",
+      "destination": "/blog/ou-dormir-en-van-reunion",
       "permanent": true
     },
     {
       "source": "/quelle-heure-est-il-a-la-reunion",
-      "destination": "/blog/heure-reunion",
+      "destination": "/blog/quelle-heure-est-il-a-la-reunion",
       "permanent": true
     },
     {
       "source": "/reunion-en-janvier-avis",
-      "destination": "/blog/partir-janvier-reunion",
+      "destination": "/blog/voyage-reunion-janvier",
       "permanent": true
     },
     {
       "source": "/vacances-ile-maurice",
-      "destination": "/blog/reunion-ou-maurice",
+      "destination": "/blog/la-reunion-ou-ile-maurice",
       "permanent": true
     },
     {
       "source": "/voyager-a-la-reunion-en-mai-avis-et-meteo",
-      "destination": "/blog/partir-mai-reunion",
+      "destination": "/blog/voyage-reunion-mai",
       "permanent": true
     },
     {
@@ -106,6 +103,9 @@
       "destination": "/",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {
