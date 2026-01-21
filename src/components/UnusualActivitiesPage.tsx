@@ -117,7 +117,7 @@ const UnusualActivitiesPage: React.FC = () => {
         {/* Activities Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Nos expériences insolites sélectionnées
+            Les expériences insolites sélectionnées
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {unusualActivities.map((activity, index) => (
@@ -209,7 +209,7 @@ const UnusualActivitiesPage: React.FC = () => {
 
             <div className="bg-purple-50 p-6 rounded-lg mt-8">
               <h4 className="text-xl font-semibold text-gray-900 mb-4">
-                Nos activités insolites par niveau d'aventure
+                Les activités insolites par niveau d'aventure
               </h4>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>

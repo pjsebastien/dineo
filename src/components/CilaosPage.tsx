@@ -117,7 +117,7 @@ const CilaosPage: React.FC = () => {
               Aucune activité spécifique à Cilaos pour le moment.
             </p>
             <Link to="/" className="text-blue-600 hover:text-blue-800 mt-4 inline-block">
-              Voir toutes nos activités à La Réunion
+              Voir toutes les activités à La Réunion
             </Link>
           </div>
         )}

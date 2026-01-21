@@ -26,7 +26,7 @@ const NotFoundPage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Page non trouvée - Dineo | Activités à La Réunion</title>
-        <meta name="description" content="Cette page n'existe pas. Découvrez nos activités à La Réunion : parapente, hélicoptère, plongée, randonnées et bien plus encore." />
+        <meta name="description" content="Cette page n'existe pas. Découvrez les activités à La Réunion : parapente, hélicoptère, plongée, randonnées et bien plus encore." />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 
