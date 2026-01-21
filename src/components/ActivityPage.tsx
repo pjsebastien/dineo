@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Clock, Users, Star, MapPin, ArrowLeft, ExternalLink, Calendar, Shield, Info } from 'lucide-react';
 import { activities } from '../data/activities';
 import { Activity } from '../types/Activity';
-import { generateStructuredData, getRandomInternalLink } from '../utils/seo';
+import { generateStructuredData, generateFAQSchema, generateBreadcrumbSchema, getRandomInternalLink } from '../utils/seo';
 import Header from './Header';
 import ActivityCard from './ActivityCard';
 import Footer from './Footer';
@@ -31,6 +31,12 @@ const ActivityPage: React.FC = () => {
   const rating = parseFloat(activity.note.split('/')[0]);
   const reviewCount = activity.nb_avis.replace('≈', '').replace('~', '');
   const structuredData = generateStructuredData(activity);
+  const faqSchema = generateFAQSchema(activity);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Accueil', url: 'https://dineo.re' },
+    { name: activity.categorie, url: 'https://dineo.re' },
+    { name: activity.titre, url: `https://dineo.re/activite/${activity.slug}` }
+  ]);
   const internalLink = getRandomInternalLink();
 
   // Find similar activities (same category or location, excluding current activity)
@@ -64,6 +70,12 @@ const ActivityPage: React.FC = () => {
         <link rel="canonical" href={`https://dineo.re/activite/${activity.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
 

@@ -63,7 +63,7 @@ import CGVPage from './components/CGVPage';
 import { activities } from './data/activities';
 import { getPublishedPosts } from './data/blogPosts';
 import { Activity, FilterState } from './types/Activity';
-import { extractPrice, extractDuration } from './utils/seo';
+import { extractPrice, extractDuration, generateOrganizationSchema, generateWebSiteSchema } from './utils/seo';
 
 // Mapping des slugs de blog vers leurs composants
 const blogComponentMap: Record<string, React.ComponentType> = {
@@ -193,8 +193,19 @@ const HomePage: React.FC = () => {
     }, 500);
   };
 
+  const organizationSchema = generateOrganizationSchema();
+  const webSiteSchema = generateWebSiteSchema();
+
   return (
     <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(webSiteSchema)}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-gray-50">
         <Header onSearch={handleSearch} />
