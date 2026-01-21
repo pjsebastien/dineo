@@ -4,148 +4,20 @@ import { Helmet } from 'react-helmet';
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
 import Header from './Header';
 import Footer from './Footer';
+import { getPublishedPosts, blogCategories } from '../data/blogPosts';
 
-interface BlogPost {
-  id: string;
-  titre: string;
-  slug: string;
-  excerpt: string;
-  image: string;
-  date: string;
-  readTime: string;
-  category: string;
-  author: string;
-}
+// Fonction pour forcer le scroll en haut au clic sur un lien
+const handleLinkClick = () => {
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+};
 
 const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
 
-  // Liste des articles de blog - triés du plus récent au plus ancien
-  const blogPosts: BlogPost[] = [
-    {
-      id: '10',
-      titre: 'Tarif vol en hélicoptère à La Réunion : prix et réservation',
-      slug: 'tarif-vol-helicoptere-la-reunion',
-      excerpt: 'Découvrez les tarifs des vols en hélicoptère à La Réunion : de 110€ à 390€. Survol du volcan, cirques, cascades. Réservation en ligne et conseils.',
-      image: 'https://www.blog.dineo.re/wp-content/uploads/2023/03/helicoptere-reunion-tarifs-et-avis-1170x630.jpg',
-      date: '21 Janvier 2026',
-      readTime: '14 min',
-      category: 'Activités aériennes',
-      author: 'Équipe Dineo'
-    },
-    {
-      id: '1',
-      titre: 'Où dormir en van à La Réunion ? Top 10 des meilleurs spots',
-      slug: 'ou-dormir-en-van-reunion',
-      excerpt: 'Cap Homard, Maïdo, volcan, forêt de Bélouve... Découvrez les spots testés pour votre road trip en van aménagé à La Réunion.',
-      image: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&q=80',
-      date: '18 Janvier 2026',
-      readTime: '15 min',
-      category: 'Van & Road Trip',
-      author: 'Équipe Dineo'
-    },
-    {
-      id: '2',
-      titre: 'Road trip en van à La Réunion : itinéraire de 10 jours',
-      slug: 'road-trip-van-reunion-10-jours',
-      excerpt: 'L\'itinéraire parfait pour découvrir La Réunion en van aménagé : spots de camping, activités, conseils pratiques.',
-      image: 'https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=800&q=80',
-      date: '12 Janvier 2026',
-      readTime: '20 min',
-      category: 'Van & Road Trip',
-      author: 'Équipe Dineo'
-    },
-    {
-      id: '3',
-      titre: 'Cascade Niagara à La Réunion : accès, randonnée et baignade',
-      slug: 'cascade-niagara-la-reunion',
-      excerpt: 'Accès facile, randonnée courte 30 min et baignade rafraîchissante. Découvrez la Cascade Niagara à Sainte-Suzanne avec notre itinéraire détaillé.',
-      image: 'https://www.blog.dineo.re/wp-content/uploads/2023/03/cascade-niagara-la-reunion-1170x630.jpg',
-      date: '5 Janvier 2026',
-      readTime: '12 min',
-      category: 'Randonnée',
-      author: 'Équipe Dineo'
-    },
-    {
-      id: '4',
-      titre: 'Voyager à La Réunion en janvier : météo, avis et activités',
-      slug: 'voyage-reunion-janvier',
-      excerpt: 'Saison chaude et humide, nature luxuriante, cascades spectaculaires : découvrez si janvier est une bonne période pour visiter La Réunion.',
-      image: 'https://images.unsplash.com/photo-1589553416260-f586c8f1514f?w=800&q=80',
-      date: '28 Décembre 2025',
-      readTime: '14 min',
-      category: 'Voyage & Conseils',
-      author: 'Équipe Dineo'
-    },
-    {
-      id: '5',
-      titre: 'Voyager à La Réunion en mai : météo, conseils et activités',
-      slug: 'voyage-reunion-mai',
-      excerpt: 'Mai à La Réunion : l\'une des meilleures périodes de l\'année. Météo idéale, saison sèche, conditions parfaites pour la randonnée.',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
-      date: '15 Décembre 2025',
-      readTime: '13 min',
-      category: 'Voyage & Conseils',
-      author: 'Équipe Dineo'
-    },
-    {
-      id: '6',
-      titre: 'Quelle heure est-il à La Réunion ?',
-      slug: 'quelle-heure-est-il-a-la-reunion',
-      excerpt: 'Fuseau horaire UTC+4, décalage avec la France (+2h ou +3h selon la saison). Tout savoir sur l\'heure locale réunionnaise.',
-      image: 'https://images.unsplash.com/photo-1501139083538-0139583c060f?w=800&q=80',
-      date: '3 Décembre 2025',
-      readTime: '6 min',
-      category: 'Pratique',
-      author: 'Équipe Dineo'
-    },
-    {
-      id: '7',
-      titre: 'La Réunion est-elle un DOM ou un TOM ?',
-      slug: 'la-reunion-dom-ou-tom',
-      excerpt: 'La Réunion est un DOM (département français depuis 1946), pas un TOM. Découvrez son statut juridique et ce que cela implique pour votre voyage.',
-      image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=80',
-      date: '20 Novembre 2025',
-      readTime: '8 min',
-      category: 'Pratique',
-      author: 'Équipe Dineo'
-    },
-    {
-      id: '8',
-      titre: 'Cascade Jacqueline à Langevin : randonnée et baignade',
-      slug: 'cascade-jacqueline-langevin',
-      excerpt: 'Magnifique cascade du sud sauvage accessible par une randonnée facile 1h A/R avec un superbe bassin pour la baignade.',
-      image: 'https://www.blog.dineo.re/wp-content/uploads/2023/03/cascade-jacqueline-langevin-1170x630.jpg',
-      date: '8 Novembre 2025',
-      readTime: '10 min',
-      category: 'Randonnée',
-      author: 'Équipe Dineo'
-    },
-    {
-      id: '9',
-      titre: 'La Réunion ou Île Maurice : que choisir ?',
-      slug: 'la-reunion-ou-ile-maurice',
-      excerpt: 'Comparatif complet pour choisir entre La Réunion et Maurice selon vos envies : paysages, activités, budget, culture. Nos conseils pour faire le bon choix.',
-      image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80',
-      date: '25 Octobre 2025',
-      readTime: '15 min',
-      category: 'Voyage & Conseils',
-      author: 'Équipe Dineo'
-    },
-    {
-      id: '11',
-      titre: 'L\'histoire du rhum de La Réunion : distilleries et saveurs créoles',
-      slug: 'histoire-rhum-la-reunion',
-      excerpt: 'Trois siècles de tradition rhumière : découvrez l\'histoire fascinante du rhum réunionnais, ses distilleries emblématiques et les secrets du rhum arrangé.',
-      image: 'https://www.blog.dineo.re/wp-content/uploads/2023/03/rhum-de-lile-de-la-reunion-1170x630.jpg',
-      date: '10 Octobre 2025',
-      readTime: '16 min',
-      category: 'Culture & Gastronomie',
-      author: 'Équipe Dineo'
-    }
-  ];
-
-  const categories = ['Tous', 'Van & Road Trip', 'Randonnée', 'Voyage & Conseils', 'Pratique', 'Activités aériennes', 'Culture & Gastronomie'];
+  // Récupérer uniquement les articles publiés (publishAt <= aujourd'hui)
+  const blogPosts = getPublishedPosts();
 
   // Filtrer les articles selon la catégorie sélectionnée
   const filteredPosts = selectedCategory === 'Tous'
@@ -187,7 +59,7 @@ const BlogPage: React.FC = () => {
         <div className="bg-white rounded-xl shadow-md p-6 mb-12">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">Catégories</h2>
           <div className="flex flex-wrap gap-3">
-            {categories.map((category) => (
+            {blogCategories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
@@ -211,7 +83,7 @@ const BlogPage: React.FC = () => {
                 key={post.id}
                 className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
               >
-                <Link to={`/blog/${post.slug}`}>
+                <Link to={`/blog/${post.slug}`} onClick={handleLinkClick}>
                   <div className="relative overflow-hidden">
                     <img
                       src={post.image}

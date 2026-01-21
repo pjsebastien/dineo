@@ -124,7 +124,28 @@ const activitiesContent = fs.readFileSync(activitiesPath, 'utf-8');
 const slugMatches = [...activitiesContent.matchAll(/slug:\s*[\"']([^\"']+)[\"']/g)];
 const activitySlugs = slugMatches.map(match => `/activite/${match[1]}`);
 
-// Toutes les URLs à pré-rendre
+// Lire les articles de blog et filtrer par publishAt
+const blogPostsPath = path.resolve(__dirname, 'src/data/blogPosts.ts');
+const blogPostsContent = fs.readFileSync(blogPostsPath, 'utf-8');
+
+// Extraire les articles avec leur slug et publishAt
+const blogPostMatches = [...blogPostsContent.matchAll(/\{\s*id:\s*['"]([^'"]+)['"][^}]*slug:\s*['"]([^'"]+)['"][^}]*publishAt:\s*['"]([^'"]+)['"][^}]*\}/gs)];
+
+// Filtrer les articles publiés (publishAt <= aujourd'hui)
+const now = new Date();
+now.setHours(0, 0, 0, 0);
+
+const publishedBlogSlugs = blogPostMatches
+  .filter(match => {
+    const publishAt = new Date(match[3]);
+    publishAt.setHours(0, 0, 0, 0);
+    return publishAt <= now;
+  })
+  .map(match => `/blog/${match[2]}`);
+
+console.log(`\n📰 Found ${publishedBlogSlugs.length} published blog posts (filtered by publishAt <= today)\n`);
+
+// Toutes les URLs à pré-rendre (les articles de blog sont filtrés dynamiquement par publishAt)
 const urls = [
   '/',
   '/activites-famille-reunion',
@@ -150,17 +171,7 @@ const urls = [
   '/location-van-reunion',
   '/randonnees-reunion',
   '/blog',
-  '/blog/ou-dormir-en-van-reunion',
-  '/blog/road-trip-van-reunion-10-jours',
-  '/blog/cascade-niagara-la-reunion',
-  '/blog/voyage-reunion-janvier',
-  '/blog/voyage-reunion-mai',
-  '/blog/quelle-heure-est-il-a-la-reunion',
-  '/blog/la-reunion-dom-ou-tom',
-  '/blog/cascade-jacqueline-langevin',
-  '/blog/la-reunion-ou-ile-maurice',
-  '/blog/tarif-vol-helicoptere-la-reunion',
-  '/blog/histoire-rhum-la-reunion',
+  ...publishedBlogSlugs,  // Articles de blog filtrés par publishAt
   '/mentions-legales',
   '/politique-confidentialite',
   '/cgu',

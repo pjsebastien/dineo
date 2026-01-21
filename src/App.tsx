@@ -41,6 +41,16 @@ import BlogPostCascadeJacqueline from './components/BlogPostCascadeJacqueline';
 import BlogPostReunionVsMaurice from './components/BlogPostReunionVsMaurice';
 import BlogPostHelicopterPrice from './components/BlogPostHelicopterPrice';
 import BlogPostRhumReunion from './components/BlogPostRhumReunion';
+import BlogPostFebruaryReunion from './components/BlogPostFebruaryReunion';
+import BlogPostMarchReunion from './components/BlogPostMarchReunion';
+import BlogPostAprilReunion from './components/BlogPostAprilReunion';
+import BlogPostJuneReunion from './components/BlogPostJuneReunion';
+import BlogPostJulyReunion from './components/BlogPostJulyReunion';
+import BlogPostAugustReunion from './components/BlogPostAugustReunion';
+import BlogPostSeptemberReunion from './components/BlogPostSeptemberReunion';
+import BlogPostOctoberReunion from './components/BlogPostOctoberReunion';
+import BlogPostNovemberReunion from './components/BlogPostNovemberReunion';
+import BlogPostDecemberReunion from './components/BlogPostDecemberReunion';
 import ScrollToTop from './components/ScrollToTop';
 import SEOContent from './components/SEOContent';
 import FAQ from './components/FAQ';
@@ -51,8 +61,45 @@ import MentionsLegalesPage from './components/MentionsLegalesPage';
 import PolitiqueConfidentialitePage from './components/PolitiqueConfidentialitePage';
 import CGVPage from './components/CGVPage';
 import { activities } from './data/activities';
+import { getPublishedPosts } from './data/blogPosts';
 import { Activity, FilterState } from './types/Activity';
 import { extractPrice, extractDuration } from './utils/seo';
+
+// Mapping des slugs de blog vers leurs composants
+const blogComponentMap: Record<string, React.ComponentType> = {
+  'ou-dormir-en-van-reunion': BlogPostVanSpots,
+  'road-trip-van-reunion-10-jours': BlogPostRoadTrip10Days,
+  'cascade-niagara-la-reunion': BlogPostCascadeNiagara,
+  'voyage-reunion-janvier': BlogPostJanuaryReunion,
+  'voyage-reunion-mai': BlogPostMayReunion,
+  'quelle-heure-est-il-a-la-reunion': BlogPostReunionTime,
+  'la-reunion-dom-ou-tom': BlogPostReunionDomTom,
+  'cascade-jacqueline-langevin': BlogPostCascadeJacqueline,
+  'la-reunion-ou-ile-maurice': BlogPostReunionVsMaurice,
+  'tarif-vol-helicoptere-la-reunion': BlogPostHelicopterPrice,
+  'histoire-rhum-la-reunion': BlogPostRhumReunion,
+  'voyage-reunion-fevrier': BlogPostFebruaryReunion,
+  'voyage-reunion-mars': BlogPostMarchReunion,
+  'voyage-reunion-avril': BlogPostAprilReunion,
+  'voyage-reunion-juin': BlogPostJuneReunion,
+  'voyage-reunion-juillet': BlogPostJulyReunion,
+  'voyage-reunion-aout': BlogPostAugustReunion,
+  'voyage-reunion-septembre': BlogPostSeptemberReunion,
+  'voyage-reunion-octobre': BlogPostOctoberReunion,
+  'voyage-reunion-novembre': BlogPostNovemberReunion,
+  'voyage-reunion-decembre': BlogPostDecemberReunion,
+};
+
+// Récupère les routes de blog publiées (filtrées par publishAt)
+const getPublishedBlogRoutes = () => {
+  const publishedPosts = getPublishedPosts();
+  return publishedPosts
+    .filter(post => blogComponentMap[post.slug])
+    .map(post => ({
+      slug: post.slug,
+      component: blogComponentMap[post.slug]
+    }));
+};
 
 const HomePage: React.FC = () => {
   const [filters, setFilters] = useState<FilterState>({
@@ -372,17 +419,10 @@ export function AppRoutes() {
       <Route path="/location-van-reunion" element={<VanRentalPage />} />
       <Route path="/randonnees-reunion" element={<HikingPage />} />
       <Route path="/blog" element={<BlogPage />} />
-      <Route path="/blog/ou-dormir-en-van-reunion" element={<BlogPostVanSpots />} />
-      <Route path="/blog/road-trip-van-reunion-10-jours" element={<BlogPostRoadTrip10Days />} />
-      <Route path="/blog/cascade-niagara-la-reunion" element={<BlogPostCascadeNiagara />} />
-      <Route path="/blog/voyage-reunion-janvier" element={<BlogPostJanuaryReunion />} />
-      <Route path="/blog/voyage-reunion-mai" element={<BlogPostMayReunion />} />
-      <Route path="/blog/quelle-heure-est-il-a-la-reunion" element={<BlogPostReunionTime />} />
-      <Route path="/blog/la-reunion-dom-ou-tom" element={<BlogPostReunionDomTom />} />
-      <Route path="/blog/cascade-jacqueline-langevin" element={<BlogPostCascadeJacqueline />} />
-      <Route path="/blog/la-reunion-ou-ile-maurice" element={<BlogPostReunionVsMaurice />} />
-      <Route path="/blog/tarif-vol-helicoptere-la-reunion" element={<BlogPostHelicopterPrice />} />
-      <Route path="/blog/histoire-rhum-la-reunion" element={<BlogPostRhumReunion />} />
+      {/* Routes de blog générées dynamiquement (filtrées par publishAt) */}
+      {getPublishedBlogRoutes().map(({ slug, component: Component }) => (
+        <Route key={slug} path={`/blog/${slug}`} element={<Component />} />
+      ))}
       <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
       <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
       <Route path="/cgu" element={<CGVPage />} />
