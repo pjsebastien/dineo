@@ -165,14 +165,9 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
                   </div>
                 </div>
               </div>
-              <a 
-                href="https://www.blog.dineo.re/" 
-                target="_blank" 
-                rel="dofollow"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
+              <Link to="/blog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Blog
-              </a>
+              </Link>
               <Link to="/a-propos" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 À propos
               </Link>
@@ -428,15 +423,13 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
               🚐 Location de van
             </Link>
 
-            <a
-              href="https://www.blog.dineo.re/"
-              target="_blank"
-              rel="dofollow"
+            <Link
+              to="/blog"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Blog
-            </a>
+            </Link>
             
             <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2">
               Destinations

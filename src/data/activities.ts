@@ -39,7 +39,7 @@ export const activities: Activity[] = [
     destination: "Île de la Réunion",
     lieu: "Baie de Saint‑Leu",
     url: "https://www.manawa.com/fr-FR/activite/ile-de-la-reunion/baie-de-saint-leu/snorkeling/snorkeling-dans-la-baie-de-saint-leu-la-reunion/11286?_cid=1985",
-    prix_des: "Dès 35 €",
+    prix_des: "Dès 55 €",
     duree: "1 h 30",
     age_min: "6 ans",
     niveau: "Accessible à tous",
@@ -566,7 +566,7 @@ export const activities: Activity[] = [
     destination: "Île de la Réunion",
     lieu: "Piton de la Fournaise",
     url: "https://www.manawa.com/fr-FR/activite/ile-de-la-reunion/piton-de-la-fournaise/speleologie/speleologie-dans-les-tunnels-de-lave-du-volcan-du-piton-de-la-fournaise-la-reunion/11722?_cid=1985",
-    prix_des: "Dès 45 €",
+    prix_des: "Dès 55 €",
     duree: "De 1 h à 6 h",
     age_min: "6 ans",
     niveau: "Sportif occasionnel",
@@ -1581,7 +1581,39 @@ export const activities: Activity[] = [
   image_url_1: "https://res.cloudinary.com/funbooker/image/upload/ar_4:3,c_fill,dpr_auto,f_auto,q_auto,w_900/v1/marketplace-listing/gsqqbqesx70d3dwvmelc",
   image_url_2: "https://res.cloudinary.com/funbooker/image/upload/ar_4:3,c_fill,dpr_auto,f_auto,q_auto,w_900/v1/marketplace-listing/tpy3w2lcnttbteiyl1rj",
   image_url_3: "https://res.cloudinary.com/funbooker/image/upload/ar_4:3,c_fill,dpr_auto,f_auto,q_auto,w_900/v1/marketplace-listing/m3tykzji1h24qpiqkr6e"
+},
+{
+  titre: "Cours de cuisine créole chez l’habitant avec dégustation à Saint-Benoît",
+  categorie: "Terre",
+  sous_categorie: "Cuisine & gastronomie",
+  destination: "Île de la Réunion",
+  lieu: "Saint-Benoît, quartier de l’Abondance, La Réunion",
+  url: "https://go.ceetiz.com/e9e37503-5a68-4a2c-93f0-b84ff7de5044",
+  prix_des: "À partir de 50 € / personne",
+  duree: "6 h",
+  age_min: "8 ans",
+  niveau: "Accessible à tous",
+  politique_annulation: "Annulation gratuite sous conditions",
+  langues: "français",
+  point_de_rdv: "Saint-Benoît – lieu exact communiqué après réservation",
+  comprend: "Atelier de cuisine créole chez l’habitant; Petit-déjeuner traditionnel (rizsofé et ti café grillé); Participation à la préparation des plats et desserts; Dégustation des plats réalisés; Boissons locales à l’apéritif",
+  ne_comprend_pas: "Transport depuis et vers le logement; Pourboires; Extras personnels",
+  a_prevoir: "Tenue confortable; Signaler toute allergie ou contre-indication alimentaire avant la réservation",
+  pre_requis: "Minimum 2 participants requis; Enfants acceptés jusqu’à 7 ans inclus accompagnés",
+  conditions_particulieres: "Activité disponible du mardi au samedi; Capacité maximale de 15 personnes; Report ou remboursement possible en cas d’annulation",
+  organisateur: "Far Far Kréole",
+  note: "5/5",
+  nb_avis: "1",
+  points_forts: "Cuisine créole authentique; Expérience chez l’habitant; Préparation participative; Dégustation conviviale; Produits locaux",
+  resume: "Vivez une journée immersive dans la gastronomie réunionnaise à Saint-Benoît. Accueilli chez l’habitant, vous participez à la préparation de spécialités créoles avant de partager un repas convivial dans la plus pure tradition locale.",
+  seo_title: "Cours de cuisine créole chez l’habitant à Saint-Benoît – La Réunion",
+  slug: "cours-cuisine-creole-chez-lhabitant-saint-benoit",
+  meta_description: "Découvrez la cuisine créole lors d’un cours chez l’habitant à Saint-Benoît à La Réunion. Atelier participatif, dégustation et immersion culturelle.",
+  image_url_1: "https://media.ceetiz.com/repository/activity-cours_de_cuisine_creole_degustation_a_saint_benoit-la_reunion_ceetiz-5.webp?format=carousel_desktop&width=1440&height=690",
+  image_url_2: "https://media.ceetiz.com/repository/activity-cours-de-cuisine-chez-l-habitant-la-reunion-ceetiz-1.webp?format=carousel_desktop&width=1440&height=690",
+  image_url_3: "https://media.ceetiz.com/repository/activity-cours_de_cuisine_creole_degustation_a_saint_benoit-la_reunion_ceetiz-6.webp?format=carousel_desktop&width=1440&height=690"
 }
+
 
 
 

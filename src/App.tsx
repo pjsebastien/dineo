@@ -29,6 +29,19 @@ import HorseRidingPage from './components/HorseRidingPage';
 import CanyoningPage from './components/CanyoningPage';
 import VanRentalPage from './components/VanRentalPage';
 import HikingPage from './components/HikingPage';
+import BlogPage from './components/BlogPage';
+import BlogPostVanSpots from './components/BlogPostVanSpots';
+import BlogPostRoadTrip10Days from './components/BlogPostRoadTrip10Days';
+import BlogPostCascadeNiagara from './components/BlogPostCascadeNiagara';
+import BlogPostJanuaryReunion from './components/BlogPostJanuaryReunion';
+import BlogPostMayReunion from './components/BlogPostMayReunion';
+import BlogPostReunionTime from './components/BlogPostReunionTime';
+import BlogPostReunionDomTom from './components/BlogPostReunionDomTom';
+import BlogPostCascadeJacqueline from './components/BlogPostCascadeJacqueline';
+import BlogPostReunionVsMaurice from './components/BlogPostReunionVsMaurice';
+import BlogPostHelicopterPrice from './components/BlogPostHelicopterPrice';
+import BlogPostRhumReunion from './components/BlogPostRhumReunion';
+import ScrollToTop from './components/ScrollToTop';
 import SEOContent from './components/SEOContent';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -358,6 +371,18 @@ export function AppRoutes() {
       <Route path="/canyoning-reunion" element={<CanyoningPage />} />
       <Route path="/location-van-reunion" element={<VanRentalPage />} />
       <Route path="/randonnees-reunion" element={<HikingPage />} />
+      <Route path="/blog" element={<BlogPage />} />
+      <Route path="/blog/ou-dormir-en-van-reunion" element={<BlogPostVanSpots />} />
+      <Route path="/blog/road-trip-van-reunion-10-jours" element={<BlogPostRoadTrip10Days />} />
+      <Route path="/blog/cascade-niagara-la-reunion" element={<BlogPostCascadeNiagara />} />
+      <Route path="/blog/voyage-reunion-janvier" element={<BlogPostJanuaryReunion />} />
+      <Route path="/blog/voyage-reunion-mai" element={<BlogPostMayReunion />} />
+      <Route path="/blog/quelle-heure-est-il-a-la-reunion" element={<BlogPostReunionTime />} />
+      <Route path="/blog/la-reunion-dom-ou-tom" element={<BlogPostReunionDomTom />} />
+      <Route path="/blog/cascade-jacqueline-langevin" element={<BlogPostCascadeJacqueline />} />
+      <Route path="/blog/la-reunion-ou-ile-maurice" element={<BlogPostReunionVsMaurice />} />
+      <Route path="/blog/tarif-vol-helicoptere-la-reunion" element={<BlogPostHelicopterPrice />} />
+      <Route path="/blog/histoire-rhum-la-reunion" element={<BlogPostRhumReunion />} />
       <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
       <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
       <Route path="/cgu" element={<CGVPage />} />
@@ -370,6 +395,7 @@ export function AppRoutes() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AppRoutes />
     </Router>
   );

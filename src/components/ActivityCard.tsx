@@ -54,9 +54,15 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, onBook }) => {
             {activity.titre}
           </h3>
         
-        <div className="flex items-center text-gray-600 mb-3">
+        <div className="flex items-center text-gray-600 mb-2">
           <MapPin className="w-4 h-4 mr-1" />
           <span className="text-sm">{activity.lieu}</span>
+        </div>
+
+        <div className="mb-3">
+          <span className="inline-block bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-medium">
+            {activity.sous_categorie}
+          </span>
         </div>
 
         <p className="text-gray-600 text-sm mb-4 line-clamp-2">
