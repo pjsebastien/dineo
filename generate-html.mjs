@@ -128,20 +128,49 @@ const activitySlugs = slugMatches.map(match => `/activite/${match[1]}`);
 const blogPostsPath = path.resolve(__dirname, 'src/data/blogPosts.ts');
 const blogPostsContent = fs.readFileSync(blogPostsPath, 'utf-8');
 
-// Extraire les articles avec leur slug et publishAt
-const blogPostMatches = [...blogPostsContent.matchAll(/\{\s*id:\s*['"]([^'"]+)['"][^}]*slug:\s*['"]([^'"]+)['"][^}]*publishAt:\s*['"]([^'"]+)['"][^}]*\}/gs)];
+// Extraire le tableau blogPosts entre les crochets
+const blogPostsArrayMatch = blogPostsContent.match(/export const blogPosts[^=]*=\s*\[([\s\S]*?)\];/);
+const blogPostsArray = blogPostsArrayMatch ? blogPostsArrayMatch[1] : '';
+
+// Séparer chaque objet article (entre { et },)
+const articleBlocks = blogPostsArray.split(/\},\s*\{/).map((block, index, arr) => {
+  // Réajouter les accolades retirées par le split
+  if (index === 0) return block + '}';
+  if (index === arr.length - 1) return '{' + block;
+  return '{' + block + '}';
+});
+
+// Extraire slug et publishAt de chaque article
+const blogArticles = articleBlocks.map(block => {
+  const slugMatch = block.match(/slug:\s*['"]([^'"]+)['"]/);
+  const publishAtMatch = block.match(/publishAt:\s*['"]([^'"]+)['"]/);
+  return {
+    slug: slugMatch ? slugMatch[1] : null,
+    publishAt: publishAtMatch ? publishAtMatch[1] : null
+  };
+}).filter(article => article.slug && article.publishAt);
 
 // Filtrer les articles publiés (publishAt <= aujourd'hui)
-const now = new Date();
-now.setHours(0, 0, 0, 0);
+// Utiliser la date UTC+4 (La Réunion) pour éviter les problèmes de fuseau horaire
+const nowUTC = new Date();
+const reunionOffset = 4 * 60 * 60 * 1000; // UTC+4 en millisecondes
+const nowReunion = new Date(nowUTC.getTime() + reunionOffset);
+const todayReunion = nowReunion.toISOString().split('T')[0]; // Format YYYY-MM-DD
 
-const publishedBlogSlugs = blogPostMatches
-  .filter(match => {
-    const publishAt = new Date(match[3]);
-    publishAt.setHours(0, 0, 0, 0);
-    return publishAt <= now;
+const publishedBlogSlugs = blogArticles
+  .filter(article => {
+    // Comparer les dates en string (YYYY-MM-DD) pour éviter les problèmes de timezone
+    return article.publishAt <= todayReunion;
   })
-  .map(match => `/blog/${match[2]}`);
+  .map(article => `/blog/${article.slug}`);
+
+// Log pour debug
+console.log(`\n📅 Today (Réunion UTC+4): ${todayReunion}`);
+console.log(`📚 Total blog articles found: ${blogArticles.length}`);
+blogArticles.forEach(a => {
+  const isPublished = a.publishAt <= todayReunion;
+  console.log(`   - ${a.slug}: publishAt=${a.publishAt} ${isPublished ? '✅' : '⏳'}`);
+});
 
 console.log(`\n📰 Found ${publishedBlogSlugs.length} published blog posts (filtered by publishAt <= today)\n`);
 
