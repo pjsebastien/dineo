@@ -1,4 +1,5 @@
 import { activities } from '../data/activities';
+import { getPublishedPosts } from '../data/blogPosts';
 
 interface SitemapUrl {
   loc: string;
@@ -10,7 +11,10 @@ interface SitemapUrl {
 export const generateSitemap = (): string => {
   const baseUrl = 'https://dineo.re';
   const currentDate = new Date().toISOString().split('T')[0];
-  
+
+  // Récupérer les articles publiés dynamiquement
+  const publishedPosts = getPublishedPosts();
+
   const urls: SitemapUrl[] = [
     // Page d'accueil
     {
@@ -19,7 +23,7 @@ export const generateSitemap = (): string => {
       changefreq: 'daily',
       priority: '1.0'
     },
-    
+
     // Pages thématiques
     {
       loc: `${baseUrl}/activites-famille-reunion`,
@@ -51,7 +55,7 @@ export const generateSitemap = (): string => {
       changefreq: 'weekly',
       priority: '0.8'
     },
-    
+
     // Pages destinations
     {
       loc: `${baseUrl}/que-faire-saint-pierre-reunion`,
@@ -96,13 +100,13 @@ export const generateSitemap = (): string => {
       priority: '0.7'
     },
     {
-      loc: `${baseUrl}/que-faire-salazie-reunion`,
+      loc: `${baseUrl}/que-faire-cirque-salazie-reunion`,
       lastmod: currentDate,
       changefreq: 'weekly',
       priority: '0.7'
     },
     {
-      loc: `${baseUrl}/que-faire-saint-gilles-reunion`,
+      loc: `${baseUrl}/que-faire-saint-gilles-les-bains-reunion`,
       lastmod: currentDate,
       changefreq: 'weekly',
       priority: '0.7'
@@ -114,7 +118,7 @@ export const generateSitemap = (): string => {
       priority: '0.7'
     },
     {
-      loc: `${baseUrl}/que-faire-plaine-palmistes-reunion`,
+      loc: `${baseUrl}/que-faire-plaine-palmistes-belouve-reunion`,
       lastmod: currentDate,
       changefreq: 'weekly',
       priority: '0.7'
@@ -126,83 +130,17 @@ export const generateSitemap = (): string => {
       priority: '0.7'
     },
 
-    // Articles de blog
+    // Page blog
     {
       loc: `${baseUrl}/blog`,
       lastmod: currentDate,
       changefreq: 'weekly',
       priority: '0.8'
     },
-    {
-      loc: `${baseUrl}/blog/meilleurs-spots-van-amenage-reunion`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
-    {
-      loc: `${baseUrl}/blog/road-trip-10-jours-reunion`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
-    {
-      loc: `${baseUrl}/blog/cascade-niagara-reunion`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
-    {
-      loc: `${baseUrl}/blog/partir-janvier-reunion`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
-    {
-      loc: `${baseUrl}/blog/partir-mai-reunion`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
-    {
-      loc: `${baseUrl}/blog/heure-reunion`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
-    {
-      loc: `${baseUrl}/blog/reunion-dom-tom`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
-    {
-      loc: `${baseUrl}/blog/cascade-jacqueline-reunion`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
-    {
-      loc: `${baseUrl}/blog/reunion-ou-maurice`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
-    {
-      loc: `${baseUrl}/blog/prix-helicoptere-reunion`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
-    {
-      loc: `${baseUrl}/blog/rhum-reunion`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: '0.7'
-    },
 
     // Pages thématiques supplémentaires
     {
-      loc: `${baseUrl}/balades-a-cheval`,
+      loc: `${baseUrl}/balades-cheval-reunion`,
       lastmod: currentDate,
       changefreq: 'weekly',
       priority: '0.7'
@@ -252,6 +190,16 @@ export const generateSitemap = (): string => {
       priority: '0.3'
     }
   ];
+
+  // Ajouter les articles de blog publiés dynamiquement
+  publishedPosts.forEach(post => {
+    urls.push({
+      loc: `${baseUrl}/blog/${post.slug}`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: '0.7'
+    });
+  });
 
   // Ajouter toutes les pages d'activités dynamiquement
   activities.forEach(activity => {
