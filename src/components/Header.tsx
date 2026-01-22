@@ -291,10 +291,10 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
         </div>
       </header>
 
-      {/* Menu mobile */}
+      {/* Menu mobile - Fixed pour être visible peu importe la position de scroll */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-gray-200 shadow-lg">
-          <div className="px-4 py-2 space-y-1">
+        <div className="md:hidden fixed top-16 left-0 right-0 bottom-0 bg-white z-40 overflow-y-auto">
+          <div className="px-4 py-2 space-y-1 pb-20">
             <div className="relative mb-4" onClick={(e) => e.stopPropagation()}>
               <form onSubmit={handleSearchSubmit} className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
