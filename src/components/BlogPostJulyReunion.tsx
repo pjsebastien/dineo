@@ -20,6 +20,11 @@ const BlogPostJulyReunion: React.FC = () => {
         <meta property="og:url" content="https://dineo.re/blog/voyage-reunion-juillet" />
         <meta property="og:image" content="https://www.blog.dineo.re/wp-content/uploads/2026/01/baleine-ile-de-La-Reunion.jpg" />
 
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Voyager à La Réunion en juillet : haute saison et baleines" />
+        <meta name="twitter:description" content="Juillet à La Réunion : haute saison, baleines et conditions météo idéales. Guide complet." />
+        <meta name="twitter:image" content="https://www.blog.dineo.re/wp-content/uploads/2026/01/baleine-ile-de-La-Reunion.jpg" />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

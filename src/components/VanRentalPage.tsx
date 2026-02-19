@@ -160,6 +160,11 @@ const VanRentalPage: React.FC = () => {
         <meta property="og:description" content="Louez un van aménagé entre particuliers à La Réunion dès 50€/jour. Totalement équipés, autonomes, livraison aéroport possible." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://dineo.re/location-van-reunion" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Location de van à La Réunion | Van aménagé dès 50€/jour" />
+        <meta name="twitter:description" content="Louez un van aménagé entre particuliers à La Réunion dès 50€/jour. Totalement équipés, autonomes, livraison aéroport possible." />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

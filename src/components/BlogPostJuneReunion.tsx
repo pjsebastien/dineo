@@ -20,6 +20,11 @@ const BlogPostJuneReunion: React.FC = () => {
         <meta property="og:url" content="https://dineo.re/blog/voyage-reunion-juin" />
         <meta property="og:image" content="https://www.blog.dineo.re/wp-content/uploads/2026/01/cirque-ile-de-La-Reunion.jpg" />
 
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Voyager à La Réunion en juin : le mois idéal pour la randonnée" />
+        <meta name="twitter:description" content="Juin à La Réunion : saison sèche, conditions parfaites pour la randonnée et peu de touristes." />
+        <meta name="twitter:image" content="https://www.blog.dineo.re/wp-content/uploads/2026/01/cirque-ile-de-La-Reunion.jpg" />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

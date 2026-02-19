@@ -13,6 +13,15 @@ const AboutPage: React.FC = () => {
         <meta name="description" content="Découvrez Dineo, votre plateforme de référence pour trouver et réserver les meilleures activités à La Réunion. Notre mission : vous faire vivre des expériences inoubliables." />
         <meta name="keywords" content="à propos dineo, dineo réunion, plateforme activités réunion, réservation activités" />
         <link rel="canonical" href="https://dineo.re/a-propos" />
+        <meta property="og:title" content="À propos de Dineo | Activités à La Réunion" />
+        <meta property="og:description" content="Découvrez Dineo, votre plateforme de référence pour trouver et réserver les meilleures activités à La Réunion." />
+        <meta property="og:url" content="https://dineo.re/a-propos" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="À propos de Dineo | Activités à La Réunion" />
+        <meta name="twitter:description" content="Découvrez Dineo, votre plateforme de référence pour trouver et réserver les meilleures activités à La Réunion." />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

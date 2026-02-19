@@ -54,6 +54,15 @@ const SainteSuzannePage: React.FC = () => {
         <meta name="description" content="Découvrez les activités à Sainte-Suzanne : canyoning familial Bassin Bœuf, Rivière Sainte-Suzanne, cascades Niagara, bassins naturels. Côte nord de La Réunion." />
         <meta name="keywords" content="que faire sainte-suzanne réunion, activités sainte-suzanne, canyoning sainte-suzanne, bassin bœuf, cascade niagara réunion" />
         <link rel="canonical" href="https://dineo.re/que-faire-sainte-suzanne-reunion" />
+        <meta property="og:title" content="Que faire à Sainte-Suzanne à La Réunion ? | Activités et Visites" />
+        <meta property="og:description" content="Découvrez les activités à Sainte-Suzanne : canyoning familial Bassin Bœuf, Rivière Sainte-Suzanne, cascades Niagara, bassins naturels. Côte nord de La Réunion." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dineo.re/que-faire-sainte-suzanne-reunion" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Que faire à Sainte-Suzanne à La Réunion ? | Activités et Visites" />
+        <meta name="twitter:description" content="Découvrez les activités à Sainte-Suzanne : canyoning familial Bassin Bœuf, Rivière Sainte-Suzanne, cascades Niagara, bassins naturels. Côte nord de La Réunion." />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

@@ -151,8 +151,14 @@ const BlogPostVanSpots: React.FC = () => {
         <meta property="og:description" content="Cap Homard face au lagon, Maïdo avec vue sur Mafate, nuit au volcan... Tous les spots testés pour votre road trip en van à La Réunion." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://dineo.re/blog/ou-dormir-en-van-reunion" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
         <meta property="article:published_time" content="2025-01-21" />
         <meta property="article:author" content="Équipe Dineo" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Où dormir en van à La Réunion ? Top 10 des meilleurs spots" />
+        <meta name="twitter:description" content="Cap Homard face au lagon, Maïdo avec vue sur Mafate, nuit au volcan... Tous les spots testés pour votre road trip en van à La Réunion." />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

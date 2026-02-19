@@ -55,6 +55,15 @@ const SaintBenoitPage: React.FC = () => {
         <meta name="description" content="Découvrez les activités à Saint-Benoît : canyoning Rivière des Marsouins, Bassin Bœuf, balades à cheval, accès Piton de la Fournaise. Nature sauvage de l'est." />
         <meta name="keywords" content="que faire saint-benoît réunion, activités saint-benoît, canyoning saint-benoît, bassin bœuf, rivière marsouins, cheval saint-benoît réunion" />
         <link rel="canonical" href="https://dineo.re/que-faire-saint-benoit-reunion" />
+        <meta property="og:title" content="Que faire à Saint-Benoît à La Réunion ? | Activités et Visites" />
+        <meta property="og:description" content="Découvrez les activités à Saint-Benoît : canyoning Rivière des Marsouins, Bassin Bœuf, balades à cheval, accès Piton de la Fournaise. Nature sauvage de l'est." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dineo.re/que-faire-saint-benoit-reunion" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Que faire à Saint-Benoît à La Réunion ? | Activités et Visites" />
+        <meta name="twitter:description" content="Découvrez les activités à Saint-Benoît : canyoning Rivière des Marsouins, Bassin Bœuf, balades à cheval, accès Piton de la Fournaise. Nature sauvage de l'est." />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

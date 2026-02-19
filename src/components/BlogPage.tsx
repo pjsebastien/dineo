@@ -35,6 +35,11 @@ const BlogPage: React.FC = () => {
           <meta property="og:description" content="Découvrez nos guides, conseils et bons plans pour profiter au maximum de vos activités à La Réunion : randonnées, canyoning, plongée et plus encore." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://dineo.re/blog" />
+          <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Blog Dineo | Guides et conseils activités La Réunion" />
+          <meta name="twitter:description" content="Découvrez nos guides, conseils et bons plans pour profiter au maximum de vos activités à La Réunion : randonnées, canyoning, plongée et plus encore." />
+          <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

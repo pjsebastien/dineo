@@ -96,6 +96,11 @@ const CanyoningPage: React.FC = () => {
         <meta property="og:description" content="Découvrez les plus beaux canyons de La Réunion : rappels, toboggans, sauts. Pour tous niveaux dès 50€." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://dineo.re/canyoning-reunion" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Canyoning à La Réunion | Les Meilleurs Canyons" />
+        <meta name="twitter:description" content="Découvrez les plus beaux canyons de La Réunion : rappels, toboggans, sauts. Pour tous niveaux dès 50€." />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

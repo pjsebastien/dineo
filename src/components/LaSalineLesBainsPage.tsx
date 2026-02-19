@@ -53,6 +53,15 @@ const LaSalineLesBainsPage: React.FC = () => {
         <meta name="description" content="Découvrez les activités à La Saline Les Bains : snorkeling dans le plus beau lagon, plage de l'Hermitage, paddle, kayak transparent, tortues marines. Station balnéaire familiale." />
         <meta name="keywords" content="que faire la saline réunion, lagon hermitage, plage la saline, snorkeling la saline, activités nautiques réunion, tortues marines réunion" />
         <link rel="canonical" href="https://dineo.re/que-faire-la-saline-les-bains-reunion" />
+        <meta property="og:title" content="Que faire à La Saline Les Bains à La Réunion ?" />
+        <meta property="og:description" content="Découvrez les activités à La Saline Les Bains : snorkeling dans le plus beau lagon, plage de l'Hermitage, paddle, kayak transparent, tortues marines. Station balnéaire familiale." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dineo.re/que-faire-la-saline-les-bains-reunion" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Que faire à La Saline Les Bains à La Réunion ?" />
+        <meta name="twitter:description" content="Découvrez les activités à La Saline Les Bains : snorkeling dans le plus beau lagon, plage de l'Hermitage, paddle, kayak transparent, tortues marines. Station balnéaire familiale." />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

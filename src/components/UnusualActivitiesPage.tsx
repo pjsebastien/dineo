@@ -76,6 +76,11 @@ const UnusualActivitiesPage: React.FC = () => {
           <meta property="og:description" content="Découvrez les activités les plus insolites de La Réunion : spéléologie tunnels de lave, kayak transparent, nage avec dauphins. Expériences uniques au monde." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://dineo.re/activites-insolites-reunion" />
+          <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Activités Insolites à La Réunion | Expériences Originales" />
+          <meta name="twitter:description" content="Découvrez les activités les plus insolites de La Réunion : spéléologie tunnels de lave, kayak transparent, nage avec dauphins. Expériences uniques au monde." />
+          <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

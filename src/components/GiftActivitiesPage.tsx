@@ -76,6 +76,11 @@ const GiftActivitiesPage: React.FC = () => {
           <meta property="og:description" content="Offrez une expérience inoubliable à La Réunion : hélicoptère, parapente, plongée, observation dauphins. Bons cadeaux valables 12 mois, souvenirs garantis." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://dineo.re/activites-a-offrir-reunion" />
+          <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Activités à Offrir à La Réunion | Bons Cadeaux Expériences" />
+          <meta name="twitter:description" content="Offrez une expérience inoubliable à La Réunion : hélicoptère, parapente, plongée, observation dauphins. Bons cadeaux valables 12 mois, souvenirs garantis." />
+          <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

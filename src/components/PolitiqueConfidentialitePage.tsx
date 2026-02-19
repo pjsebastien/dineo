@@ -12,6 +12,10 @@ const PolitiqueConfidentialitePage: React.FC = () => {
         <title>Politique de confidentialité - Dineo</title>
         <meta name="description" content="Politique de confidentialité et protection des données personnelles de Dineo" />
         <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://dineo.re/politique-confidentialite" />
+        <meta property="og:title" content="Politique de confidentialité - Dineo" />
+        <meta property="og:url" content="https://dineo.re/politique-confidentialite" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <Header />

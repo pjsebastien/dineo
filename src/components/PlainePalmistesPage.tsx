@@ -55,6 +55,15 @@ const PlainePalmistesPage: React.FC = () => {
         <meta name="description" content="Découvrez les activités à Plaine des Palmistes et Bélouve : canyoning extrême Takamaka, randonnées en forêt primaire, observation nature. Altitude et fraîcheur." />
         <meta name="keywords" content="que faire plaine palmistes réunion, activités bélouve, canyoning takamaka, forêt bélouve, randonnée plaine palmistes réunion" />
         <link rel="canonical" href="https://dineo.re/que-faire-plaine-palmistes-belouve-reunion" />
+        <meta property="og:title" content="Que faire à Plaine des Palmistes / Bélouve à La Réunion ? | Activités" />
+        <meta property="og:description" content="Découvrez les activités à Plaine des Palmistes et Bélouve : canyoning extrême Takamaka, randonnées en forêt primaire, observation nature. Altitude et fraîcheur." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dineo.re/que-faire-plaine-palmistes-belouve-reunion" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Que faire à Plaine des Palmistes / Bélouve à La Réunion ? | Activités" />
+        <meta name="twitter:description" content="Découvrez les activités à Plaine des Palmistes et Bélouve : canyoning extrême Takamaka, randonnées en forêt primaire, observation nature. Altitude et fraîcheur." />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

@@ -57,6 +57,11 @@ const SaintPierrePage: React.FC = () => {
           <meta property="og:description" content="Découvrez les meilleures activités à Saint-Pierre : survols en hélicoptère, accès Piton de la Fournaise. Toutes les expériences depuis le sud de La Réunion." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://dineo.re/que-faire-saint-pierre-reunion" />
+          <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Que faire à Saint-Pierre à La Réunion ? | Activités et Visites" />
+          <meta name="twitter:description" content="Découvrez les meilleures activités à Saint-Pierre : survols en hélicoptère, accès Piton de la Fournaise. Toutes les expériences depuis le sud de La Réunion." />
+          <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

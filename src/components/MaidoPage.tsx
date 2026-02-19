@@ -57,6 +57,11 @@ const MaidoPage: React.FC = () => {
           <meta property="og:description" content="Découvrez les activités au Maïdo : balades à poney pour enfants, équitation en forêt de Cryptomérias, vue sur Mafate. Activités familiales à 2200m d'altitude." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://dineo.re/que-faire-maido-reunion" />
+          <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Que faire au Piton Maïdo à La Réunion ? | Activités et Visites" />
+          <meta name="twitter:description" content="Découvrez les activités au Maïdo : balades à poney pour enfants, équitation en forêt de Cryptomérias, vue sur Mafate. Activités familiales à 2200m d'altitude." />
+          <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

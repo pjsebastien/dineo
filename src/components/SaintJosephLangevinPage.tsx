@@ -53,6 +53,15 @@ const SaintJosephLangevinPage: React.FC = () => {
         <meta name="description" content="Découvrez les activités à Saint-Joseph et la rivière Langevin : canyoning de Grand Galet, cascade spectaculaire, toboggans naturels. Le paradis du canyoning au sud de La Réunion." />
         <meta name="keywords" content="que faire saint-joseph réunion, rivière langevin, cascade grand galet, canyoning langevin, activités saint-joseph, cascade langevin réunion" />
         <link rel="canonical" href="https://dineo.re/que-faire-saint-joseph-langevin-reunion" />
+        <meta property="og:title" content="Que faire à Saint-Joseph et la rivière Langevin à La Réunion ?" />
+        <meta property="og:description" content="Découvrez les activités à Saint-Joseph et la rivière Langevin : canyoning de Grand Galet, cascade spectaculaire, toboggans naturels. Le paradis du canyoning au sud de La Réunion." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dineo.re/que-faire-saint-joseph-langevin-reunion" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Que faire à Saint-Joseph et la rivière Langevin à La Réunion ?" />
+        <meta name="twitter:description" content="Découvrez les activités à Saint-Joseph et la rivière Langevin : canyoning de Grand Galet, cascade spectaculaire, toboggans naturels. Le paradis du canyoning au sud de La Réunion." />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

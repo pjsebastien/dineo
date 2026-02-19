@@ -99,6 +99,11 @@ const HorseRidingPage: React.FC = () => {
         <meta property="og:description" content="Découvrez les plus belles balades à cheval à La Réunion : volcans, forêts, cascades. Pour tous niveaux dès 25€." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://dineo.re/balades-cheval-reunion" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Balades à Cheval à La Réunion | Les Meilleures Randonnées Équestres" />
+        <meta name="twitter:description" content="Découvrez les plus belles balades à cheval à La Réunion : volcans, forêts, cascades. Pour tous niveaux dès 25€." />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

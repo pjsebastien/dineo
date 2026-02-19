@@ -67,6 +67,11 @@ const FamilyActivitiesPage: React.FC = () => {
           <meta property="og:description" content="Découvrez les meilleures activités familiales à La Réunion : observation dauphins, balades à cheval, snorkeling enfants. Activités sécurisées dès 2 ans." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://dineo.re/activites-famille-reunion" />
+          <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Activités à La Réunion en Famille | Sorties avec Enfants" />
+          <meta name="twitter:description" content="Découvrez les meilleures activités familiales à La Réunion : observation dauphins, balades à cheval, snorkeling enfants. Activités sécurisées dès 2 ans." />
+          <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

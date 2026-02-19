@@ -67,6 +67,11 @@ const ActivityPage: React.FC = () => {
         <meta property="og:description" content={activity.meta_description} />
         <meta property="og:image" content={activity.image_url_1} />
         <meta property="og:type" content="product" />
+        <meta property="og:url" content={`https://dineo.re/activite/${activity.slug}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={activity.seo_title} />
+        <meta name="twitter:description" content={activity.meta_description} />
+        <meta name="twitter:image" content={activity.image_url_1} />
         <link rel="canonical" href={`https://dineo.re/activite/${activity.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}

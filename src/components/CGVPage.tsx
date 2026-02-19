@@ -12,6 +12,10 @@ const CGVPage: React.FC = () => {
         <title>Conditions Générales d'Utilisation - Dineo</title>
         <meta name="description" content="Conditions générales d'utilisation du site Dineo - Activités à La Réunion" />
         <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://dineo.re/cgu" />
+        <meta property="og:title" content="Conditions Générales d'Utilisation - Dineo" />
+        <meta property="og:url" content="https://dineo.re/cgu" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <Header />

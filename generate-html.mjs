@@ -261,6 +261,7 @@ function injectHelmetHead(html, helmet, url, activitiesCount) {
     }
     if (helmet.meta.includes('property="twitter:') || helmet.meta.includes('name="twitter:')) {
       html = html.replace(/\s*<meta\s+property="twitter:[^"]*"[^>]*\/?>/g, '');
+      html = html.replace(/\s*<meta\s+name="twitter:[^"]*"[^>]*\/?>/g, '');
     }
     html = html.replace('</head>', `    ${helmet.meta}\n  </head>`);
   }

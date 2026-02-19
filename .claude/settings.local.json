@@ -49,7 +49,8 @@
       "Bash(npx tsx:*)",
       "WebFetch(domain:dineo.re)",
       "Bash(powershell -File:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File:*)"
     ]
   }
 }

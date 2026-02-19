@@ -59,6 +59,11 @@ const SaintLeuPage: React.FC = () => {
           <meta property="og:description" content="Découvrez les activités incontournables à Saint-Leu : plongée Réserve marine, parapente lagon, snorkeling. Toutes les expériences aquatiques et aériennes." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://dineo.re/que-faire-saint-leu-reunion" />
+          <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Que faire à Saint-Leu à La Réunion ? | Activités Nautiques et Parapente" />
+          <meta name="twitter:description" content="Découvrez les activités incontournables à Saint-Leu : plongée Réserve marine, parapente lagon, snorkeling. Toutes les expériences aquatiques et aériennes." />
+          <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

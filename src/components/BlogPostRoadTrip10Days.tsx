@@ -180,8 +180,14 @@ const BlogPostRoadTrip10Days: React.FC = () => {
         <meta property="og:description" content="Le circuit complet pour découvrir La Réunion en van : cirques, volcan, plages, activités. Spots van, conseils pratiques, budget détaillé." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://dineo.re/blog/road-trip-van-reunion-10-jours" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
         <meta property="article:published_time" content="2025-01-21" />
         <meta property="article:author" content="Équipe Dineo" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Road Trip en Van à La Réunion : Itinéraire de 10 jours" />
+        <meta name="twitter:description" content="Le circuit complet pour découvrir La Réunion en van : cirques, volcan, plages, activités. Spots van, conseils pratiques, budget détaillé." />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

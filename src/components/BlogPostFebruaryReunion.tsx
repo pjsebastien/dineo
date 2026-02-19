@@ -23,6 +23,7 @@ const BlogPostFebruaryReunion: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Voyager à La Réunion en février : météo, cyclones et activités" />
         <meta name="twitter:description" content="Février à La Réunion : tout savoir sur la saison des pluies et comment en profiter." />
+        <meta name="twitter:image" content="https://www.blog.dineo.re/wp-content/uploads/2026/01/cascade-ile-de-La-Reunion.jpg" />
 
         <script type="application/ld+json">
           {JSON.stringify({

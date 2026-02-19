@@ -20,6 +20,11 @@ const BlogPostSeptemberReunion: React.FC = () => {
         <meta property="og:url" content="https://dineo.re/blog/voyage-reunion-septembre" />
         <meta property="og:image" content="https://www.blog.dineo.re/wp-content/uploads/2026/01/randonnee-La-Reunion.jpg" />
 
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Voyager à La Réunion en septembre : le mois parfait" />
+        <meta name="twitter:description" content="Septembre à La Réunion : baleines, météo idéale et moins de monde. Le compromis parfait !" />
+        <meta name="twitter:image" content="https://www.blog.dineo.re/wp-content/uploads/2026/01/randonnee-La-Reunion.jpg" />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
