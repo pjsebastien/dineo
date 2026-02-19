@@ -53,6 +53,10 @@ const SalaziePage: React.FC = () => {
         <meta name="description" content="Découvrez les activités au Cirque de Salazie : canyoning de Trou Blanc, cascades spectaculaires, Hell-Bourg classé, randonnées. Le cirque le plus verdoyant de La Réunion." />
         <meta name="keywords" content="que faire salazie réunion, cirque salazie, canyon trou blanc, hell-bourg, voile de la mariée, activités salazie, visiter salazie" />
         <link rel="canonical" href="https://dineo.re/que-faire-cirque-salazie-reunion" />
+          <meta property="og:title" content="Que faire au Cirque de Salazie à La Réunion ? | Activités" />
+          <meta property="og:description" content="Découvrez les activités au Cirque de Salazie : canyoning de Trou Blanc, cascades spectaculaires, Hell-Bourg classé, randonnées. Le cirque le plus verdoyant de La Réunion." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://dineo.re/que-faire-cirque-salazie-reunion" />
       </Helmet>
 
       <Header />

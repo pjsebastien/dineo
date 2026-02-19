@@ -10,18 +10,18 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <MapPin className="w-8 h-8 text-blue-400" />
-              <h3 className="text-2xl font-bold">Dineo</h3>
+              <span className="text-2xl font-bold">Dineo</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Votre spécialiste des activités à La Réunion. Découvrez l'île intense 
+              Votre spécialiste des activités à La Réunion. Découvrez l'île intense
               à travers des expériences authentiques et inoubliables.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/dineo.re" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Facebook</span>
                 <div className="w-6 h-6 bg-blue-600 rounded"></div>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/dineo.re" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Instagram</span>
                 <div className="w-6 h-6 bg-pink-600 rounded"></div>
               </a>
@@ -31,24 +31,24 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Activités</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Randonnées</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Sports nautiques</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Activités aériennes</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Découverte nature</a></li>
+              <li><Link to="/randonnees-reunion" className="hover:text-white transition-colors">Randonnées</Link></li>
+              <li><Link to="/canyoning-reunion" className="hover:text-white transition-colors">Canyoning</Link></li>
+              <li><Link to="/balades-cheval-reunion" className="hover:text-white transition-colors">Balades à cheval</Link></li>
+              <li><Link to="/location-van-reunion" className="hover:text-white transition-colors">Location de van</Link></li>
+              <li><Link to="/activites-famille-reunion" className="hover:text-white transition-colors">Activités en famille</Link></li>
+              <li><Link to="/activites-couple-reunion" className="hover:text-white transition-colors">Activités en couple</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4">Destinations</h4>
             <ul className="space-y-2 text-gray-300">
-              <li className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                <span>contact@dineo.re</span>
-              </li>
-              <li className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <span>+262 692 XX XX XX</span>
-              </li>
+              <li><Link to="/que-faire-saint-pierre-reunion" className="hover:text-white transition-colors">Saint-Pierre</Link></li>
+              <li><Link to="/que-faire-saint-gilles-les-bains-reunion" className="hover:text-white transition-colors">Saint-Gilles</Link></li>
+              <li><Link to="/que-faire-cilaos-reunion" className="hover:text-white transition-colors">Cilaos</Link></li>
+              <li><Link to="/que-faire-cirque-salazie-reunion" className="hover:text-white transition-colors">Salazie</Link></li>
+              <li><Link to="/que-faire-piton-fournaise-reunion" className="hover:text-white transition-colors">Piton de la Fournaise</Link></li>
+              <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
             </ul>
           </div>
         </div>

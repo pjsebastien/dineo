@@ -31,6 +31,10 @@ const BlogPage: React.FC = () => {
         <meta name="description" content="Découvrez nos guides, conseils et bons plans pour profiter au maximum de vos activités à La Réunion : randonnées, canyoning, plongée et plus encore." />
         <meta name="keywords" content="blog réunion, guide activités réunion, conseils randonnée, blog voyage réunion" />
         <link rel="canonical" href="https://dineo.re/blog" />
+          <meta property="og:title" content="Blog Dineo | Guides et conseils activités La Réunion" />
+          <meta property="og:description" content="Découvrez nos guides, conseils et bons plans pour profiter au maximum de vos activités à La Réunion : randonnées, canyoning, plongée et plus encore." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://dineo.re/blog" />
       </Helmet>
 
       <Header />

@@ -216,8 +216,89 @@ const template = fs.readFileSync(path.resolve(__dirname, 'dist/index.html'), 'ut
 // Calculer le nombre d'activités pour l'utiliser dans le titre de la page d'accueil
 const activitiesCount = activitySlugs.length;
 
-// Charger le module SSR
+// IMPORTANT: Temporairement supprimer document du mock AVANT l'import SSR
+// pour que react-side-effect (utilisé par react-helmet) détecte un environnement serveur
+// et autorise Helmet.renderStatic() (canUseDOM doit être false à l'import)
+const savedWindowDoc = mockWindow.document;
+delete mockWindow.document;
+const savedGlobalDoc = global.document;
+delete global.document;
+
+// Charger le module SSR (react-helmet vérifie canUseDOM ici)
 const { render } = await import('./dist-ssr/entry-server.js');
+
+// Restaurer document après l'import
+mockWindow.document = savedWindowDoc;
+global.document = savedGlobalDoc;
+
+// Fonction pour injecter les meta tags Helmet dans le HTML
+function injectHelmetHead(html, helmet, url, activitiesCount) {
+  // Remplacer le titre si Helmet en fournit un (non vide)
+  if (helmet.title && helmet.title.includes('<title') && !helmet.title.match(/<title[^>]*><\/title>/)) {
+    html = html.replace(/<title>.*?<\/title>/, helmet.title);
+  } else if (url === '/') {
+    // Fallback homepage : injecter le nombre d'activités dans le titre
+    html = html.replace(
+      /<title>.*?<\/title>/,
+      `<title>Découvrez et réservez ${activitiesCount} activités à faire à La Réunion</title>`
+    );
+    html = html.replace(
+      /property="og:title" content="[^"]*"/,
+      `property="og:title" content="Découvrez et réservez ${activitiesCount} activités à faire à La Réunion"`
+    );
+  }
+
+  // Remplacer les meta tags si Helmet en fournit
+  if (helmet.meta) {
+    if (helmet.meta.includes('name="description"')) {
+      html = html.replace(/\s*<meta\s+name="description"[^>]*\/?>/g, '');
+    }
+    if (helmet.meta.includes('name="keywords"')) {
+      html = html.replace(/\s*<meta\s+name="keywords"[^>]*\/?>/g, '');
+    }
+    if (helmet.meta.includes('property="og:')) {
+      html = html.replace(/\s*<meta\s+property="og:[^"]*"[^>]*\/?>/g, '');
+    }
+    if (helmet.meta.includes('property="twitter:') || helmet.meta.includes('name="twitter:')) {
+      html = html.replace(/\s*<meta\s+property="twitter:[^"]*"[^>]*\/?>/g, '');
+    }
+    html = html.replace('</head>', `    ${helmet.meta}\n  </head>`);
+  }
+
+  // Remplacer le canonical si Helmet en fournit un
+  if (helmet.link && helmet.link.includes('canonical')) {
+    html = html.replace(/\s*<link\s+rel="canonical"[^>]*\/?>/g, '');
+    html = html.replace('</head>', `    ${helmet.link}\n  </head>`);
+  }
+
+  // Ajouter les scripts structured data de Helmet
+  if (helmet.script) {
+    // Supprimer TOUS les structured data (statiques ET data-react-helmet) pour éviter les doublons
+    html = html.replace(/\s*<script[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/g, '');
+
+    // Dédupliquer les schemas par @type (react-helmet peut accumuler des doublons entre rendus)
+    const scriptMatches = [...helmet.script.matchAll(/<script[^>]*>(.*?)<\/script>/g)];
+    const seenTypes = new Set();
+    const uniqueScripts = [];
+    for (const match of scriptMatches) {
+      try {
+        const data = JSON.parse(match[1]);
+        const type = data['@type'] || 'unknown';
+        if (!seenTypes.has(type)) {
+          seenTypes.add(type);
+          uniqueScripts.push(match[0]);
+        }
+      } catch {
+        uniqueScripts.push(match[0]);
+      }
+    }
+    const dedupedScript = uniqueScripts.join('');
+
+    html = html.replace('</head>', `    ${dedupedScript}\n  </head>`);
+  }
+
+  return html;
+}
 
 let count = 0;
 
@@ -226,36 +307,37 @@ for (const url of urls) {
   try {
     console.log(`  [${++count}/${urls.length}] Rendering ${url}`);
 
-    // 1. Génère le HTML de la page avec SSR
-    const { html: appHtml } = await render(url);
+    // 1. Mettre à jour le mock location AVANT le rendu
+    mockLocation.pathname = url;
+    mockLocation.href = `http://localhost:3000${url}`;
+    mockLocation.search = '';
+    mockLocation.hash = '';
+    global.location = mockLocation;
+    mockWindow.location = mockLocation;
 
-    // 2. Remplace le placeholder dans index.html
+    // 2. Génère le HTML de la page avec SSR + extraction Helmet
+    const { html: appHtml, helmet } = await render(url);
+
+    // 3. Remplace le placeholder dans index.html
     let html = template.replace('<!--app-html-->', appHtml);
 
-    // 3. Pour la page d'accueil uniquement, remplacer le titre dynamiquement avec le nombre d'activités
-    if (url === '/') {
-      html = html.replace(
-        /<title>.*?<\/title>/,
-        `<title>Découvrez et réservez ${activitiesCount} activités à faire à La Réunion</title>`
-      );
-      html = html.replace(
-        /property="og:title" content="[^"]*"/,
-        `property="og:title" content="Découvrez et réservez ${activitiesCount} activités à faire à La Réunion"`
-      );
+    // 4. Injecter les meta tags Helmet dans le <head>
+    if (helmet) {
+      html = injectHelmetHead(html, helmet, url, activitiesCount);
     }
 
-    // 3. Détermine le chemin de sortie
+    // 5. Détermine le chemin de sortie
     const filePath = url === '/'
       ? path.resolve(__dirname, 'dist/index.html')
       : path.resolve(__dirname, `dist${url}/index.html`);
 
-    // 4. Crée les dossiers si nécessaire
+    // 6. Crée les dossiers si nécessaire
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
 
-    // 5. Sauvegarde le fichier HTML avec le contenu complet
+    // 7. Sauvegarde le fichier HTML avec le contenu complet
     fs.writeFileSync(filePath, html, 'utf-8');
   } catch (error) {
     console.error(`  ✗ Error rendering ${url}:`, error.message);

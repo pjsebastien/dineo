@@ -63,6 +63,10 @@ const FamilyActivitiesPage: React.FC = () => {
         <meta name="description" content="Découvrez les meilleures activités familiales à La Réunion : observation dauphins, balades à cheval, snorkeling enfants. Activités sécurisées dès 2 ans." />
         <meta name="keywords" content="activités famille la réunion, sortie enfant réunion, activité familiale réunion, que faire en famille réunion, loisirs famille réunion" />
         <link rel="canonical" href="https://dineo.re/activites-famille-reunion" />
+          <meta property="og:title" content="Activités à La Réunion en Famille | Sorties avec Enfants" />
+          <meta property="og:description" content="Découvrez les meilleures activités familiales à La Réunion : observation dauphins, balades à cheval, snorkeling enfants. Activités sécurisées dès 2 ans." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://dineo.re/activites-famille-reunion" />
       </Helmet>
 
       <Header />

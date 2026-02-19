@@ -52,6 +52,10 @@ const SaintGillesPage: React.FC = () => {
         <meta name="description" content="Découvrez les activités à Saint-Gilles-Les-Bains : plongée, observation dauphins et baleines, snorkeling, surf. La station balnéaire de La Réunion." />
         <meta name="keywords" content="que faire saint-gilles réunion, saint-gilles-les-bains, plongée saint-gilles, dauphins réunion, lagon saint-gilles, activités nautiques réunion" />
         <link rel="canonical" href="https://dineo.re/que-faire-saint-gilles-les-bains-reunion" />
+          <meta property="og:title" content="Que faire à Saint-Gilles-Les-Bains à La Réunion ?" />
+          <meta property="og:description" content="Découvrez les activités à Saint-Gilles-Les-Bains : plongée, observation dauphins et baleines, snorkeling, surf. La station balnéaire de La Réunion." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://dineo.re/que-faire-saint-gilles-les-bains-reunion" />
       </Helmet>
 
       <Header />

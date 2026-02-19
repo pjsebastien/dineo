@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Clock, Users, Star, MapPin, ArrowLeft, ExternalLink, Calendar, Shield, Info } from 'lucide-react';
 import { activities } from '../data/activities';
 import { Activity } from '../types/Activity';
-import { generateStructuredData, generateFAQSchema, generateBreadcrumbSchema, getRandomInternalLink } from '../utils/seo';
+import { generateStructuredData, generateFAQSchema, generateBreadcrumbSchema } from '../utils/seo';
 import Header from './Header';
 import ActivityCard from './ActivityCard';
 import Footer from './Footer';
@@ -37,7 +37,7 @@ const ActivityPage: React.FC = () => {
     { name: activity.categorie, url: 'https://dineo.re' },
     { name: activity.titre, url: `https://dineo.re/activite/${activity.slug}` }
   ]);
-  const internalLink = getRandomInternalLink();
+  // Lien interne stable (pas d'ancre aléatoire pour le SEO)
 
   // Find similar activities (same category or location, excluding current activity)
   const similarActivities = activities
@@ -316,7 +316,7 @@ const ActivityPage: React.FC = () => {
                   {' '}La réservation s'effectue en toute sécurité via notre plateforme partenaire.
 
                   La politique d'annulation {activity.politique_annulation.toLowerCase()} vous permet de modifier vos plans si nécessaire.
-                  N'hésitez pas à explorer d'autres <a href="/" className="text-blue-600 hover:text-blue-800 font-medium">{internalLink}</a>
+                  N'hésitez pas à explorer d'autres <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium">activités à faire à La Réunion</Link>
                   {' '}pour enrichir votre découverte de l'île intense.
                 </p>
                 

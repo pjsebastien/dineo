@@ -53,6 +53,10 @@ const CilaosPage: React.FC = () => {
         <meta name="description" content="Découvrez les activités à Cilaos : canyon Fleurs Jaunes, randonnées Piton des Neiges, sources thermales. Toutes les activités du cirque montagnard de La Réunion." />
         <meta name="keywords" content="que faire cilaos réunion, canyoning cilaos, fleurs jaunes cilaos, randonnée cilaos, piton des neiges, cirque cilaos activités" />
         <link rel="canonical" href="https://dineo.re/que-faire-cilaos-reunion" />
+          <meta property="og:title" content="Que faire à Cilaos à La Réunion ? | Canyoning et Randonnées" />
+          <meta property="og:description" content="Découvrez les activités à Cilaos : canyon Fleurs Jaunes, randonnées Piton des Neiges, sources thermales. Toutes les activités du cirque montagnard de La Réunion." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://dineo.re/que-faire-cilaos-reunion" />
       </Helmet>
 
       <Header />

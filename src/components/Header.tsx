@@ -74,7 +74,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
               <MapPin className="w-8 h-8 text-blue-600" />
-              <h1 className="text-2xl font-bold text-gray-900">Dineo</h1>
+              <span className="text-2xl font-bold text-gray-900">Dineo</span>
             </Link>
             
             <nav className="hidden md:flex items-center space-x-8">
@@ -471,13 +471,13 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
             <ScrollLink to="/que-faire-sainte-suzanne-reunion" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Sainte-Suzanne
             </ScrollLink>
-            <a
-              href="#"
+            <ScrollLink
+              to="/a-propos"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
-            </a>
+            </ScrollLink>
           </div>
         </div>
       )}

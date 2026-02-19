@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -27,17 +29,35 @@ const FAQ: React.FC = () => {
     }
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
     <section className="bg-white py-16">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
           Questions fréquentes
         </h2>
-        
+
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="border border-gray-200 rounded-lg">
@@ -45,17 +65,24 @@ const FAQ: React.FC = () => {
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="font-semibold text-gray-900">{faq.question}</span>
+                <h3 className="font-semibold text-gray-900 text-base">{faq.question}</h3>
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-gray-500" />
+                  <ChevronUp className="w-5 h-5 text-gray-500 flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-500" />
+                  <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0" />
                 )}
               </button>
-              
+
               {openIndex === index && (
                 <div className="px-6 pb-4">
                   <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  {index === 2 && (
+                    <p className="mt-2">
+                      <Link to="/activites-famille-reunion" className="text-blue-600 hover:text-blue-800 font-medium">
+                        Voir toutes les activités en famille
+                      </Link>
+                    </p>
+                  )}
                 </div>
               )}
             </div>

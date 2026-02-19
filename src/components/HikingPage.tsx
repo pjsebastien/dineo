@@ -48,10 +48,14 @@ const HikingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Meilleures randonnées à La Réunion | Trek & hiking 2025</title>
+        <title>Meilleures randonnées à La Réunion | Trek & hiking 2026</title>
         <meta name="description" content="Découvrez les meilleures randonnées à La Réunion : Piton de la Fournaise, cirque de Mafate, Piton des Neiges. Guides experts, tous niveaux. Réservez en ligne." />
         <meta name="keywords" content="randonnée réunion, trek réunion, piton de la fournaise, mafate, piton des neiges, randonnée guidée réunion, trek volcan réunion" />
         <link rel="canonical" href="https://dineo.re/randonnees-reunion" />
+          <meta property="og:title" content="Meilleures randonnées à La Réunion | Trek & hiking 2026" />
+          <meta property="og:description" content="Découvrez les meilleures randonnées à La Réunion : Piton de la Fournaise, cirque de Mafate, Piton des Neiges. Guides experts, tous niveaux. Réservez en ligne." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://dineo.re/randonnees-reunion" />
       </Helmet>
 
       <Header />

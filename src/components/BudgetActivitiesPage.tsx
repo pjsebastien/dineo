@@ -54,6 +54,10 @@ const BudgetActivitiesPage: React.FC = () => {
         <meta name="description" content="Découvrez les meilleures activités à petit prix à La Réunion : snorkeling 35€, balades à cheval 35€, observation dauphins 40€. Qualité garantie, budget maîtrisé." />
         <meta name="keywords" content="activités pas chères la réunion, petit budget réunion, activité abordable réunion, pas cher réunion, économique réunion" />
         <link rel="canonical" href="https://dineo.re/activites-pas-cheres-reunion" />
+          <meta property="og:title" content="Activités Pas Chères à La Réunion | Petit Budget" />
+          <meta property="og:description" content="Découvrez les meilleures activités à petit prix à La Réunion : snorkeling 35€, balades à cheval 35€, observation dauphins 40€. Qualité garantie, budget maîtrisé." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://dineo.re/activites-pas-cheres-reunion" />
       </Helmet>
 
       <Header />

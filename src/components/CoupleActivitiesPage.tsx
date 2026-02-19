@@ -69,6 +69,10 @@ const CoupleActivitiesPage: React.FC = () => {
         <meta name="description" content="Découvrez les activités les plus romantiques à La Réunion : parapente, hélicoptère, observation dauphins. Expériences inoubliables pour couples." />
         <meta name="keywords" content="activités couple la réunion, romantique réunion, sortie amoureux réunion, voyage de noces réunion, activité romantique réunion" />
         <link rel="canonical" href="https://dineo.re/activites-couple-reunion" />
+          <meta property="og:title" content="Activités Romantiques à La Réunion en Couple | Sorties à Deux" />
+          <meta property="og:description" content="Découvrez les activités les plus romantiques à La Réunion : parapente, hélicoptère, observation dauphins. Expériences inoubliables pour couples." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://dineo.re/activites-couple-reunion" />
       </Helmet>
 
       <Header />

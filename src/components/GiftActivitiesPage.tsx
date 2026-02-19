@@ -72,6 +72,10 @@ const GiftActivitiesPage: React.FC = () => {
         <meta name="description" content="Offrez une expérience inoubliable à La Réunion : hélicoptère, parapente, plongée, observation dauphins. Bons cadeaux valables 12 mois, souvenirs garantis." />
         <meta name="keywords" content="cadeau activité la réunion, bon cadeau réunion, offrir expérience réunion, cadeau original réunion, voucher activité réunion" />
         <link rel="canonical" href="https://dineo.re/activites-a-offrir-reunion" />
+          <meta property="og:title" content="Activités à Offrir à La Réunion | Bons Cadeaux Expériences" />
+          <meta property="og:description" content="Offrez une expérience inoubliable à La Réunion : hélicoptère, parapente, plongée, observation dauphins. Bons cadeaux valables 12 mois, souvenirs garantis." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://dineo.re/activites-a-offrir-reunion" />
       </Helmet>
 
       <Header />

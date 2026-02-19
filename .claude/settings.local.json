@@ -46,7 +46,10 @@
       "Bash(npm run generate:*)",
       "Bash(tail:*)",
       "Bash(npx tsc:*)",
-      "Bash(npx tsx:*)"
+      "Bash(npx tsx:*)",
+      "WebFetch(domain:dineo.re)",
+      "Bash(powershell -File:*)",
+      "Bash(python3:*)"
     ]
   }
 }
