@@ -32,9 +32,19 @@ const ActivityPage: React.FC = () => {
   const reviewCount = activity.nb_avis.replace('≈', '').replace('~', '');
   const structuredData = generateStructuredData(activity);
   const faqSchema = generateFAQSchema(activity);
+
+  // Map sous-catégories to their dedicated category page URLs
+  const categoryUrlMap: Record<string, string> = {
+    'Balade à cheval': 'https://dineo.re/balades-cheval-reunion',
+    'Équitation': 'https://dineo.re/balades-cheval-reunion',
+    'Canyoning': 'https://dineo.re/canyoning-reunion',
+    'Randonnée': 'https://dineo.re/randonnees-reunion',
+  };
+  const categoryUrl = categoryUrlMap[activity.sous_categorie] || 'https://dineo.re';
+
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Accueil', url: 'https://dineo.re' },
-    { name: activity.categorie, url: 'https://dineo.re' },
+    { name: activity.sous_categorie, url: categoryUrl },
     { name: activity.titre, url: `https://dineo.re/activite/${activity.slug}` }
   ]);
   // Lien interne stable (pas d'ancre aléatoire pour le SEO)
@@ -68,6 +78,8 @@ const ActivityPage: React.FC = () => {
         <meta property="og:image" content={activity.image_url_1} />
         <meta property="og:type" content="product" />
         <meta property="og:url" content={`https://dineo.re/activite/${activity.slug}`} />
+        <meta property="og:site_name" content="Dineo" />
+        <meta property="og:locale" content="fr_FR" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={activity.seo_title} />
         <meta name="twitter:description" content={activity.meta_description} />
@@ -175,11 +187,13 @@ const ActivityPage: React.FC = () => {
               <img
                 src={activity.image_url_2}
                 alt={`${activity.titre} - Image 2`}
+                loading="lazy"
                 className="w-full h-48 object-cover rounded-xl shadow-md"
               />
               <img
                 src={activity.image_url_3}
                 alt={`${activity.titre} - Image 3`}
+                loading="lazy"
                 className="w-full h-48 object-cover rounded-xl shadow-md"
               />
             </div>

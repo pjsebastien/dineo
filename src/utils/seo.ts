@@ -1,7 +1,8 @@
 export const generateStructuredData = (activity: any) => {
   const rating = parseFloat(activity.note.split('/')[0]);
   const reviewCount = parseInt(activity.nb_avis.replace('≈', '').replace('~', ''));
-  const price = activity.prix_des.replace('Dès ', '').replace(' €', '').replace(',', '.');
+  const priceMatch = activity.prix_des.match(/(\d+[\.,]?\d*)/);
+  const price = priceMatch ? priceMatch[1].replace(',', '.') : '0';
 
   // Date de validité du prix : 1 an à partir d'aujourd'hui
   const priceValidUntil = new Date();
@@ -47,15 +48,6 @@ export const generateStructuredData = (activity: any) => {
       "url": "https://dineo.re"
     }
   };
-};
-
-export const getRandomInternalLink = () => {
-  const anchors = [
-    "activités île de la Réunion",
-    "activité la Réunion", 
-    "activités à faire à la Réunion"
-  ];
-  return anchors[Math.floor(Math.random() * anchors.length)];
 };
 
 export const extractPrice = (priceString: string): number => {

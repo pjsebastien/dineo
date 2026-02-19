@@ -401,7 +401,7 @@ const BlogPostSeptemberReunion: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link to="/blog/voyage-reunion-aout" className="group">
               <div className="bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=400&q=80" alt="La Réunion en août" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=400&q=80" alt="La Réunion en août" loading="lazy" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Voyager à La Réunion en août</h4>
                   <p className="text-sm text-gray-600">Pic des baleines et haute saison</p>
@@ -410,7 +410,7 @@ const BlogPostSeptemberReunion: React.FC = () => {
             </Link>
             <Link to="/blog/voyage-reunion-octobre" className="group">
               <div className="bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400&q=80" alt="La Réunion en octobre" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400&q=80" alt="La Réunion en octobre" loading="lazy" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Voyager à La Réunion en octobre</h4>
                   <p className="text-sm text-gray-600">Vacances de la Toussaint et printemps austral</p>

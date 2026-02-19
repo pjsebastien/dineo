@@ -14,8 +14,16 @@ const MentionsLegalesPage: React.FC = () => {
         <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://dineo.re/mentions-legales" />
         <meta property="og:title" content="Mentions légales - Dineo" />
+        <meta property="og:description" content="Mentions légales du site Dineo - Activités à La Réunion" />
         <meta property="og:url" content="https://dineo.re/mentions-legales" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+        <meta property="og:site_name" content="Dineo" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mentions légales - Dineo" />
+        <meta name="twitter:description" content="Mentions légales du site Dineo - Activités à La Réunion" />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

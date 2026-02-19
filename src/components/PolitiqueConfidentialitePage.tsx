@@ -14,8 +14,16 @@ const PolitiqueConfidentialitePage: React.FC = () => {
         <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://dineo.re/politique-confidentialite" />
         <meta property="og:title" content="Politique de confidentialité - Dineo" />
+        <meta property="og:description" content="Politique de confidentialité et protection des données personnelles de Dineo" />
         <meta property="og:url" content="https://dineo.re/politique-confidentialite" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+        <meta property="og:site_name" content="Dineo" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Politique de confidentialité - Dineo" />
+        <meta name="twitter:description" content="Politique de confidentialité et protection des données personnelles de Dineo" />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

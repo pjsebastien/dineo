@@ -14,8 +14,16 @@ const CGVPage: React.FC = () => {
         <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://dineo.re/cgu" />
         <meta property="og:title" content="Conditions Générales d'Utilisation - Dineo" />
+        <meta property="og:description" content="Conditions générales d'utilisation du site Dineo - Activités à La Réunion" />
         <meta property="og:url" content="https://dineo.re/cgu" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://dineo.re/og-image.jpg" />
+        <meta property="og:site_name" content="Dineo" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Conditions Générales d'Utilisation - Dineo" />
+        <meta name="twitter:description" content="Conditions générales d'utilisation du site Dineo - Activités à La Réunion" />
+        <meta name="twitter:image" content="https://dineo.re/og-image.jpg" />
       </Helmet>
 
       <Header />

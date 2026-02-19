@@ -442,7 +442,7 @@ const BlogPostJuneReunion: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link to="/blog/voyage-reunion-mai" className="group">
               <div className="bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&q=80" alt="La Réunion en mai" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&q=80" alt="La Réunion en mai" loading="lazy" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Voyager à La Réunion en mai</h4>
                   <p className="text-sm text-gray-600">Période idéale, conditions parfaites</p>
@@ -451,7 +451,7 @@ const BlogPostJuneReunion: React.FC = () => {
             </Link>
             <Link to="/blog/voyage-reunion-juillet" className="group">
               <div className="bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="La Réunion en juillet" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="La Réunion en juillet" loading="lazy" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Voyager à La Réunion en juillet</h4>
                   <p className="text-sm text-gray-600">Haute saison et observation des baleines</p>

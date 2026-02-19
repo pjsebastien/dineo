@@ -334,7 +334,7 @@ const BlogPostAugustReunion: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link to="/blog/voyage-reunion-juillet" className="group">
               <div className="bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="La Réunion en juillet" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="La Réunion en juillet" loading="lazy" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Voyager à La Réunion en juillet</h4>
                   <p className="text-sm text-gray-600">Haute saison et début des baleines</p>
@@ -343,7 +343,7 @@ const BlogPostAugustReunion: React.FC = () => {
             </Link>
             <Link to="/blog/voyage-reunion-septembre" className="group">
               <div className="bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&q=80" alt="La Réunion en septembre" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&q=80" alt="La Réunion en septembre" loading="lazy" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Voyager à La Réunion en septembre</h4>
                   <p className="text-sm text-gray-600">Baleines + moins de monde = parfait !</p>

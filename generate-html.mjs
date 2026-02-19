@@ -272,11 +272,11 @@ function injectHelmetHead(html, helmet, url, activitiesCount) {
     html = html.replace('</head>', `    ${helmet.link}\n  </head>`);
   }
 
-  // Ajouter les scripts structured data de Helmet
-  if (helmet.script) {
-    // Supprimer TOUS les structured data (statiques ET data-react-helmet) pour éviter les doublons
-    html = html.replace(/\s*<script[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/g, '');
+  // Supprimer TOUS les structured data statiques du template
+  html = html.replace(/\s*<script[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/g, '');
 
+  // Ajouter les scripts structured data de Helmet (si la page en fournit)
+  if (helmet.script) {
     // Dédupliquer les schemas par @type (react-helmet peut accumuler des doublons entre rendus)
     const scriptMatches = [...helmet.script.matchAll(/<script[^>]*>(.*?)<\/script>/g)];
     const seenTypes = new Set();
@@ -296,6 +296,14 @@ function injectHelmetHead(html, helmet, url, activitiesCount) {
     const dedupedScript = uniqueScripts.join('');
 
     html = html.replace('</head>', `    ${dedupedScript}\n  </head>`);
+  }
+
+  // Injecter og:site_name et og:locale si absents
+  if (!html.includes('og:site_name')) {
+    html = html.replace('</head>', `    <meta property="og:site_name" content="Dineo" />\n  </head>`);
+  }
+  if (!html.includes('og:locale')) {
+    html = html.replace('</head>', `    <meta property="og:locale" content="fr_FR" />\n  </head>`);
   }
 
   return html;
@@ -364,6 +372,7 @@ const getPageConfig = (url) => {
   if (url === '/') return { priority: '1.0', changefreq: 'daily' };
   if (url.startsWith('/activite/')) return { priority: '0.8', changefreq: 'weekly' };
   if (url.startsWith('/activites-') || url.startsWith('/que-faire-')) return { priority: '0.9', changefreq: 'weekly' };
+  if (['/balades-cheval-reunion', '/canyoning-reunion', '/location-van-reunion', '/randonnees-reunion'].includes(url)) return { priority: '0.9', changefreq: 'weekly' };
   if (['/mentions-legales', '/politique-confidentialite', '/cgu'].includes(url)) return { priority: '0.3', changefreq: 'yearly' };
   return { priority: '0.5', changefreq: 'monthly' };
 };

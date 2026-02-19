@@ -33,6 +33,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, onBook }) => {
           <img
             src={activity.image_url_1}
             alt={activity.titre}
+            loading="lazy"
             className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
           />
         <div className="absolute top-4 left-4">
